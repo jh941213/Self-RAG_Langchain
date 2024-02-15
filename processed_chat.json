@@ -1,0 +1,3410 @@
+[
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩에 특징을 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 칩의 특징에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 칩은 다음과 같은 특징을 지니고 있습니다: TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE와 같은 하드와이어 TCP/IP 프로토콜을 지원합니다. 8개의 독립적인 소켓을 동시에 지원하며, 전력 소비를 줄이기 위한 파워 다운 모드를 지원합니다. UDP를 통한 Wake on LAN을 지원하고, 고속 시리얼 주변 인터페이스(SPI MODE 0, 3)를 지원합니다. 내부에는 32Kbytes 메모리가 탑재되어 Tx/Rx 버퍼로 사용됩니다. 10BaseT/100BaseTX 이더넷 PHY를 내장하고 있으며, 자동 협상(전이중 및 반 이중, 10 및 100 기반)을 지원합니다. IP 분할을 지원하지 않습니다. 3.3V 작동 전압과 5V I/O 신호 허용으로 설계되었습니다. LED 출력(전이중/반 이중, 링크, 속도, 활성)을 제공하며, 48 핀 LQFP 무연 패키지(7x7mm, 0.5mm 피치)로 제공됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩에 대한 문서와 데이터 시트에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500에 대한 문서를 어디서 찾을 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5500에 대한 문서는 다음과 같은 링크를 통해 접근할 수 있습니다:\n\n- 한국어 데이터 시트: [https://docs.wiznet.io/img/products/w5500/W5500_ds_v110e.pdf](https://docs.wiznet.io/img/products/w5500/W5500_ds_v110e.pdf)\n- 영어 데이터 시트: [https://docs.wiznet.io/img/products/w5500/W5500_ds_v110k.pdf](https://docs.wiznet.io/img/products/w5500/W5500_ds_v110k.pdf)\n\n이 문서들은 W5500 칩의 기능, 사양, 사용 방법에 대한 상세한 정보를 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩을 위한 WIZnet의 ioLibrary 드라이버와 관련된 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 드라이버에 대해 자세히 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet의 ioLibrary는 WIZnet 칩을 위해 특별히 설계된 종합적인 인터넷 오프로드 라이브러리입니다. 이 라이브러리는 W5500을 포함한 WIZnet 제품을 사용하여 애플리케이션을 설계하는 데 도움이 되는 드라이버 및 애플리케이션 프로토콜 모음입니다. ioLibrary는 ioLibrary_BSD, ioLibrary, 그리고 W5200 사용자를 위한 BSD 타입 드라이버의 세 부분으로 나뉩니다.\n\n1. **ioLibrary_BSD**: 이 라이브러리 부분은 Berkeley Socket 타입 API를 제공하며, ioLibrary와 동일한 함수 이름을 사용합니다. 이는 WIZCHIP(W5500, W5200 등)과 호환되는 SOCKET API와 DHCP 클라이언트, DNS 클라이언트와 같은 인터넷 기능을 포함합니다. ioLibrary_BSD는 지속적으로 업데이트되며 GitHub에서 사용할 수 있습니다: [https://github.com/Wiznet/ioLibrary_Driver](https://github.com/Wiznet/ioLibrary_Driver).\n\n2. **ioLibrary**: 이 라이브러리 부분은 기본 I/O 기능, 소켓 레지스터 접근 기능 및 플랫폼 및 네트워크 설정 유틸리티를 포함합니다. 최신 버전과 이전 버전 모두 다운로드할 수 있습니다. 이 라이브러리는 ARM Cortex-M0 MCU를 탑재한 CooCox Cookie Board에서 테스트되었습니다.\n\n3. **W5200 사용자를 위한 BSD 타입 드라이버**: 이 드라이버는 W5200 사용자를 대상으로 하며, BSD 타입의 Socket API를 제공합니다. ARM-CortexM3(STM32F103 시리즈) 칩셋에서 평가되었습니다. 이 드라이버는 최종 버전이며 더 이상 업데이트되지 않습니다. 새로운 프로젝트에는 더 적합한 새로운 드라이버를 사용하는 것이 권장됩니다: [https://docs.wiznet.io/img/products/w5500/w5500_cortexm3_firmware_for_legacy.zip](https://docs.wiznet.io/img/products/w5500/w5500_cortexm3_firmware_for_legacy.zip).\n\nWIZnet의 지속적인 업데이트와 다양한 칩 모델에 대한 넓은 지원 덕분에 ioLibrary는 WIZnet의 인터넷 칩을 사용하는 개발자들에게 귀중한 자원입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩을 위한 WIZnet의 참조 스키마 및 권장 RJ45 커넥터에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500의 참조 스키마와 권장 RJ45 커넥터에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet의 W5500 제품은 다양한 애플리케이션을 위한 다양한 연결 옵션을 제공합니다. W5500은 디자인의 유연성을 향상시키기 위해 다양한 스키마 유형으로 제공됩니다. '외부 트랜스포머 타입' 스키마는 https://docs.wiznet.io/img/products/w5500/w5500_sch_v110_use_trans_.pdf 에서 자세한 참조를 위해 접근할 수 있으며, 세밀한 디자인과 레이아웃을 특징으로 합니다.\n\n또한, W5500은 'RJ45 with Transformer Type' 구성도 지원하는데, 이 스키마는 https://docs.wiznet.io/img/products/w5500/w5500_sch_v110_use_mag_.pdf 에서 자세히 설명되어 있습니다. 이 구성은 네트워크 모듈에 통합된 트랜스포머 솔루션을 요구하는 애플리케이션에 필수적입니다.\n\n고급 애플리케이션을 위해, W5500은 'RJ45 with integrated Transformer and connected CT' 스키마를 제공합니다. 이 스키마는 https://docs.wiznet.io/assets/images/w5500_schematic-connected-cts_003-cd3d18a8736283ecf62d7e27997ccde3.jpg 에서 자세히 설명되며, 최적의 작동을 위한 추가 구성 요소인 C23과 C24의 중요성을 강조합니다.\n\nW5500에 권장되는 RJ45 커넥터에 대해서는 여러 옵션이 강조됩니다. '외부 트랜스포머' 타입의 경우, Pulse의 H1102NL(https://docs.wiznet.io/img/products/w5500/01.h1102nl_h325.pdf)과 CETUS의 LCZ3A1CB(https://docs.wiznet.io/img/products/w5500/02.lcz3a1cb.pdf) 등이 포함됩니다. 'RJ45 with integrated Transformer' 타입의 경우, CETUS의 J1B121ZCCD와 J1B1211CCD, 그리고 Pulse의 J0011D21BNL이 권장되며, 각각의 데이터시트는 https://docs.wiznet.io/img/products/w5500/1.j1b121zccd-v0-101115.pdf, https://docs.wiznet.io/img/products/w5500/2.j1b1211ccd.pdf, https://docs.wiznet.io/img/products/w5500/4.j0011d21bnl.pdf 에서 확인할 수 있습니다.\n\n특정 모듈들, 예를 들어 W5500-EVB, WIZ550io, WIZ550S2E, WIZ550web은 모두 CETUS의 J1B1211CCD 커넥터를 사용하며, 이는 WIZnet 제품 범위 내에서 커넥터의 호환성과 다양성을 입증합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5200에서 W5500 칩으로의 마이그레이션을 지원하는 WIZnet의 자료와 드라이버에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5200에서 W5500으로 마이그레이션하는 방법에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet은 W5200에서 W5500 칩으로의 전환을 지원하기 위한 종합적인 마이그레이션 자료를 제공합니다. W5200 사용자를 위해 w5500_cortexm3_firmware_for_legacy.zip라는 특별 드라이버가 제공되며, 이는 https://docs.wiznet.io/img/products/w5500/w5500_cortexm3_firmware_for_legacy.zip 에서 직접 다운로드할 수 있습니다. 이 드라이버는 현재 W5200 사용자를 위한 것이며, 최신 또는 최신 BSD 버전 드라이버를 찾는 사용자는 https://docs.wiznet.io/Product/iEthernet/W5500/driver 에서 추가 정보를 찾을 수 있습니다.\n\nW5500과 W5200 칩을 비교할 때, 몇 가지 주요 차이점이 강조됩니다. W5500 칩은 W5200의 0.18um 공정과 비교하여 0.13um 공정을 사용합니다. 두 칩 모두 비슷한 패키지 크기를 가지고 있지만, W5500은 48 LQFP(7x7 mm^2) 형식이고 W5200은 48 QFN(7x7 mm^2)입니다. W5500의 IO 전압/코어 전압은 3.3V/1.2V로, W5200의 3.3V/1.8V와 약간 다릅니다.\n\n두 칩 모두 각각 8개의 소켓을 지원합니다. 하지만, SPI 프레임 구조와 메모리 접근 능력에서 차이가 있습니다. W5500은 TX 메모리와 RX 메모리를 일반 데이터 메모리로 사용할 수 있지만, W5200은 TX 메모리만 이 목적으로 허용합니다. W5500은 SPI MCU 버스 인터페이스만을 사용하는 반면, W5200은 SPI와 8비트 병렬 간접 버스 모드를 모두 지원합니다. W5500은 LDO 출력 핀에 커패시터만 필요로 하는 등 조절 관련 회로를 단순화하여 외부 칩 전원 공급 장치가 필요 없습니다. 반면, W5200은 외부 LDO 출력 전압 1.8V가 필요합니다.\n\n다른 주목할 만한 차이점으로는 PHY 전원 다운 설정이 있으며, W5500은 PHY 레지스터를 통해 구성할 수 있고 W5200은 외부 핀을 사용합니다. W5500은 UDP를 통한 WOL을 지원하는 반면, W5200은 이더넷을 통한 WOL을 지원합니다. W5500의 PHY 모드는 펌웨어를 통해 설정할 수 있으며, W5200에는 이 기능이 없습니다. 상태 LED 구성도 다르며, W5500은 4개의 LED(SPD/DUP/ACT/Link)를 특징으로 하고 W5200은 3개의 LED(SPD/DUP/Link)를 가집니다. PHY Auto MDIX 기능은 W5200에서만 지원됩니다. 마지막으로, 100Mbps 전체 링크에서의 작동 전류는 W5500이 일반적으로 132mA이고 W5200은 160mA입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩의 TCP 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500의 TCP 기능에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet의 W5500 칩은 강력한 TCP 기능을 제공하여 효과적인 인터넷 연결성을 가능하게 합니다. 네트워크 연결을 시도하기 전에 PHY LINK(0 비트의 PHYCFGR)를 확인해야 합니다. 초기 운영을 위해서는 Mode Register(MR), Interrupt Mask Register(IMR), Retry Time-value Register(RTR), 그리고 Retry Count Register(RCR) 등 특정 레지스터를 설정해야 합니다. 네트워크 정보 설정에는 SHAR(Source Hardware Address Register), GAR(Gateway Address Register), SUBR(Subnet Mask Register), SIPR(Source IP Address Register)의 기본 세부 사항을 설정하는 것이 포함됩니다. 소켓 메모리 설정도 중요하며, 각 소켓에는 2KB의 RX 및 TX 메모리가 할당됩니다. W5500 칩은 동시에 사용 가능한 8개의 독립적인 소켓을 지원하여 TCP, UDP, IPRAW, MACRAW와 같은 다양한 통신 모드에 대응할 수 있습니다. TCP 기능은 연결 지향적이며, IP와 포트 번호를 사용하여 연결 SOCKET을 설정해야 합니다. 이는 TCP SERVER 및 TCP CLIENT 모드를 모두 지원합니다. 데이터 통신을 위해, SOCKET 초기화 후 W5500 칩은 데이터를 송수신할 수 있습니다. 이 과정은 Sn_SR 레지스터의 상태를 확인하고 LISTEN, CONNECT, DISCON과 같은 명령을 처리하는 것을 포함합니다. W5500 칩은 TCP/IP 통신을 위한 종합적인 기능 모음을 제공하며, 소켓의 초기화 및 관리, 네트워크 정보 설정, 데이터 통신 처리, 그리고 성공적인 연결 및 연결 해제 과정에 대한 상세한 단계와 고려 사항을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩의 UDP 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500의 UDP 기능에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 UDP 기능은 WIZnet의 W5500 이더넷 컨트롤러의 특징으로, 다양한 레지스터 및 메모리 작업 설정을 통해 인터넷 연결성을 제공합니다. 소켓을 사용하여 네트워크 연결을 만들기 전에 PHY LINK(0 비트의 PHYCFGR)를 확인하는 것이 필수적입니다. W5500의 작동은 Mode Register(MR), Interrupt Mask Register(IMR), Retry Time-value Register(RTR), 및 Retry Count Register(RCR)과 같은 여러 레지스터를 설정함으로써 시작됩니다. 통신을 위한 기본 네트워크 정보는 SHAR(Source Hardware Address Register), GAR(Gateway Address Register), SUBR(Subnet Mask Register), SIPR(Source IP Address Register)에서 설정해야 합니다. 소켓 메모리 정보 설정도 중요한 단계이며, SOCKET 당 2KB RX, TX 메모리 할당이 언급됩니다. W5500은 TCP, UDP, IPRAW, MACRAW 모드를 위한 8개의 소켓을 지원합니다. UDP는 연결 없는 프로토콜로, 연결 소켓 없이 통신이 수행됩니다. 유니캐스트, 브로드캐스트, 멀티캐스트 통신 방법이 자세히 설명되어 있으며, 멀티캐스트 그룹에 등록된 여러 대상과의 통신을 위해 SOCKET을 설정하는 방법을 포함합니다. 이 문서는 코드 스니펫과 일러스트레이션을 보완하여 W5500의 UDP 기능에 대한 종합적인 이해를 제공하며, W5500 칩을 사용하여 네트워크 관련 기능을 구현하고 문제를 해결해야 하는 사용자를 위한 기술 가이드로서 역할을 합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩의 IPRAW 모드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500의 IPRAW 모드에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500의 IPRAW 모드는 TCP/IP 스택의 IP 계층 상위 프로토콜을 처리할 수 있는 다재다능한 구성 요소입니다. 특히, ICMP(0x01), IGMP(0x02), TCP(0x06), UDP(0x11)와 같은 운송 계층 프로토콜을 IP 헤더의 프로토콜 필드에 기반하여 관리하는 데 특히 능숙합니다. 이 기능은 IP 수준에서 직접 프로토콜을 처리해야 하는 애플리케이션에 필수적입니다. W5500은 필요할 때 호스트가 직접 처리할 수 있도록 ping과 같은 ICMP 기능을 처리하는 데 숙련되어 있으며, 이를 위해 호스트는 Socket n을 IPRAW 모드로 열 수 있습니다. 이 기능은 W5500이 표준 작업을 넘어 특정 요구 사항에 맞는 네트워크 통신 작업에 유연성을 제공한다는 것을 보여줍니다. 개발자가 W5500을 IPRAW 모드에서 작업할 때, 개발 환경은 STM32F13C8과 같은 MCU와 CoIDE V1.7.4, Flash Loader Demonstrator, Terminal V1.9b, Wireshark V1.10.3과 같은 여러 프로그래밍 도구를 포함합니다. 이 도구들은 W5500을 사용하여 애플리케이션을 개발하고 테스트하는 데 필요한 포괄적인 환경을 제공합니다. 또한, 문서화는 IPRAW 모드에서 W5500을 사용하는 개발자들이 자신의 프로젝트에서 IPRAW 모드를 이해하고 구현하는 데 필수적인 애플리케이션 노트와 소스 코드를 제공합니다. 예를 들어, 2015-05-10에 날짜가 표시된 소스 코드 버전 1.1.0은 모든 소켓을 사용하는 수정 사항을 포함하여 W5500의 기능에 지속적인 개선을 나타냅니다. 'IPRAW Ping Test'라는 참조 비디오는 YouTube에서 사용할 수 있으며 W5500의 IPRAW 모드 기능을 실제로 보여줍니다. 기술적인 세부 사항에 대한 심층적인 정보는 직접 링크를 통해 접근할 수 있는 영어 및 한국어 버전의 W5500 데이터시트에서 제공됩니다. 데이터시트 역사는 각 버전의 변경 사항과 개선 사항을 자세히 설명하여 W5500의 사양과 기능의 진화에 대한 통찰력을 제공합니다. 마지막으로, WIZ550io와 같은 다른 WIZnet 제품의 역사는 버전, 출시 날짜 및 각 버전에서 이루어진 구체적인 변경 사항을 자세히 설명하여 WIZnet의 지속적인 제품 개발 및 향상에 대한 약속을 반영합니다. 요약하자면, WIZnet의 W5500 칩은 특히 IPRAW 모드에서 TCP/IP 스택의 상위 계층 프로토콜을 처리하는 강력한 기능을 제공하며, 포괄적인 개발 도구, 상세한 문서화, 그리고 지속적인 제품 지원 및 개선으로 보완됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 칩의 SPI 성능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500의 SPI 성능에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet의 W5500 제품은 다양한 MCU 구성 및 SPI 클록 속도로 평가될 때 인상적인 SPI 성능을 자랑합니다. Cortex-M3 MCU(STM32F103C8)를 사용한 테스트 시나리오에서 W5500은 SPI 전송을 위해 테스트되었습니다. 개발 도구로는 CoIDE v1.7.4가 사용되었으며, 주 클록은 72MHz이고 최대 SPI 클록은 36MHz였습니다. 테스트 프로젝트인 W5500_SPI_Performance.zip은 https://docs.wiznet.io/img/products/w5500/application/w5500_spi_performance.zip에서 찾을 수 있습니다. AX2 테스트 도구를 사용하여 Mbps 단위로 성능이 측정되었으며, 버퍼 및 소켓 크기에 따라 다양한 데이터 처리량 속도가 나타났습니다. Cortex-M0 MCU(M0516LBN)를 사용한 또 다른 테스트에서는 주 클록이 50MHz로 설정되고 SPI 클록이 최대 25MHz로 설정되었습니다. 동일한 테스트 프로젝트가 사용되었으며, 이 구성에서는 1.49 Mbps에서 1.693 Mbps까지 다양한 데이터 처리량 속도를 보였습니다. 또한, Cortex-M3 MCU를 사용하여 변화하는 SPI 클록 속도에 따른 W5500의 데이터 처리량이 평가되었습니다. 이 테스트는 https://docs.wiznet.io/img/products/w5500/application/w5500_spispeed_test_loopback_20140212.zip에 문서화된 SPI_SPEEP_TEST.zip에서 수행되었으며, SPI 클록 속도가 변경될 때 데이터 처리량이 0.281MHz에서 0.124 Mbps에서 36MHz에서 3.63 Mbps로 상당히 변화하는 것을 보여주었습니다. 요약하면, W5500은 SPI 전송에서 강력하고 적응 가능한 성능을 보여주며, 다양한 구성에서 유연성과 효율성을 제공합니다. SPI_SPEED_TEST.xls에서는 https://docs.wiznet.io/assets/files/spi_speed-80a9a785c488db7e4b3629ef4a57ffc2.xlsx를 통해 상세한 테스트 결과를 포함하여 더 많은 세부 정보를 찾을 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 평가 보드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB는 W5500 칩을 위한 평가 보드로, 네트워크 연결이 가능한 마이크로컨트롤러 애플리케이션을 개발하기 위한 플랫폼으로 설계되었습니다. 이 보드는 32비트 ARM® Cortex™-M0 마이크로컨트롤러를 기반으로 하며 W5500 하드와이어 TCP/IP 칩이 통합되어 있습니다. 아두이노 핀과 호환되는 점이 특징으로, 친숙한 하드웨어 환경에서의 개발을 위한 다양한 선택을 가능하게 합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB의 주요 특징 중 하나인 W5500 하드와이어 TCP/IP 칩에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 하드와이어 TCP/IP 칩에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 칩은 인터넷 연결성 구현을 단순화하는 하드와이어 TCP/IP 내장 이더넷 컨트롤러입니다. TCP, UDP, IPv4, ICMP, ARP, IGMP, PPPoE와 같은 다양한 네트워크 프로토콜을 지원합니다. 칩에는 내부 32kB Tx/Rx 소켓 버퍼 메모리가 포함되어 있으며 SPI(Serial Peripheral Interface)를 통해 인터페이스합니다. W5500 칩에 대한 자세한 정보는 https://docs.wiznet.io/Product/iEthernet/W5500/overview에서 찾을 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB에 탑재된 NXP LPC11E36/501 MCU에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "NXP LPC11E36/501 MCU에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "이 보드는 최대 50MHz에서 작동하는 32비트 ARM® Cortex™-M0 마이크로컨트롤러를 특징으로 합니다. 96kB의 온칩 플래시 프로그램 메모리, 12kB SRAM 및 4kB EEPROM을 포함합니다. UART, I2C, SPI/SSP, ADC, PWM 등 다양한 인터페이스를 제공합니다. 자세한 정보는 NXP 제품 페이지 http://www.nxp.com/products/microcontrollers/cortex_m0_m0/lpc1100/LPC11E36FHN33.html에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB에 탑재된 온보드 온도 센서에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB의 온보드 온도 센서에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "보드에는 Microchip TC1047A 온도-전압 변환기가 포함되어 있습니다. 이 센서는 -40도에서 +125도 섭씨의 넓은 온도 범위를 측정할 수 있으며, 2.7V에서 4.4V의 전압 범위에서 작동합니다. 자세한 내용은 Microchip 제품 페이지 http://www.microchip.com/wwwproducts/Devices.aspx?product=TC1047에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB의 연결성 및 인터페이스에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB의 연결성과 인터페이스에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB는 아두이노 쉴드와 호환되며 UNO Rev3를 위한 것입니다. 10/100Mbps 이더넷 포트(RJ-45 with transformer)를 특징으로 합니다. 가상 COM 포트(UART via USB Mini-B)가 제공되며, 드라이버는 http://www.ftdichip.com/Drivers/VCP.htm에서 다운로드할 수 있습니다. 보드는 시리얼 와이어 디버그(SWD)를 위한 표준 10핀 Cortex 디버그 커넥터도 포함합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB의 추가 구성 요소 및 폼 팩터에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB의 추가 구성 요소와 폼 팩터에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "보드는 사용자 푸시 버튼 두 개, 하나의 RGB LED, 그리고 ADC 제어를 위한 가변 저항을 갖추고 있습니다. 외부 4-Mbit 직렬 데이터플래시 메모리(SPI)가 포함되어 있습니다. 보드는 산업 온도 범위(-40도에서 +85도 섭씨)에서 작동합니다. W5500-EVB는 93 x 53 x 17.3mm(H)의 치수를 가지며, 2층 PCB로 구성되어 있고, 5V DC 공급이나 USB 커넥터로 전원을 공급받습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 관련 데이터시트 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB 관련 데이터시트 링크를 제공해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB와 관련된 주요 데이터시트는 다음과 같습니다: W5500 데이터시트는 https://docs.wiznet.io/Product/iEthernet/W5500/datasheet에서 확인할 수 있습니다. NXP LPC11E3x 데이터시트는 http://www.nxp.com/documents/data_sheet/LPC11E3X.pdf에서 확인 가능합니다. Microchip TC1027/TC1047A(온도 센서) 데이터시트는 http://ww1.microchip.com/downloads/en/DeviceDoc/21498D.pdf에서 제공됩니다. ATMEL AT45DB041D(외부 데이터플래시 메모리) 데이터시트는 https://docs.wiznet.io/img/products/w5500/w5500_evb/at45db041d-su.pdf에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 스키매틱 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB 스키매틱 링크를 제공해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB의 스키매틱은 다음 링크에서 확인할 수 있습니다: W5500 EVB Rev1.0 스키매틱(Eagle CAD)은 https://docs.wiznet.io/img/products/w5500/w5500_evb/w5500_evb_v1.0_140527.zip에서 다운로드할 수 있습니다. W5500 EVB Rev1.0 스키매틱(PDF)은 https://docs.wiznet.io/img/products/w5500/w5500_evb/w5500_evb_v1.0_140527.pdf에서 확인 가능합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 부품 목록 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB 부품 목록을 제공해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 EVB Rev1.0 부품 목록은 https://docs.wiznet.io/img/products/w5500/w5500_evb/w5500_evb_pl_140527-1.pdf에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB DXF 파일 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB DXF 파일을 제공해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB의 DXF 파일은 https://docs.wiznet.io/img/products/w5500/w5500_evb/w5500-evb-dxf.zip에서 다운로드할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 치수 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB의 치수 정보를 제공해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 EVB Rev1.0의 치수는 https://docs.wiznet.io/assets/images/w5500_evb_v1.0_demension-53b063c668204056a7a5840e79f443ee.png에서 이미지로 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 펌웨어 시작 및 새 프로젝트 가이드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB를 시작하는 데 필요한 가이드와 리소스에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB는 펌웨어 개발 및 새 프로젝트 시작에 대한 가이드를 포함하며, 가상 COM 포트 드라이버에 대한 리소스를 제공합니다. 초보자를 위해 'Hello World!' 튜토리얼 및 새 프로그램 다운로드 지침이 https://docs.wiznet.io/Product/iEthernet/W5500/W5500-EVB/getting-started에서 제공됩니다. 이러한 포괄적인 기능 및 리소스 세트는 W5500 칩의 기능을 활용하여 임베디드 네트워크 애플리케이션을 개발하는 데 이상적인 플랫폼을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB를 처음 시작하는 사용자를 위한 가이드 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 EVB를 처음 시작할 때 따라야 할 단계에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 EVB를 처음 사용하는 경우, 다음 단계를 따라 보드를 성공적으로 작동시킬 수 있습니다: 1. **보드 연결**: USB 케이블을 사용해 PC에 W5500 EVB를 연결하고, LAN 케이블을 보드에 연결하세요. LAN 케이블 연결은 필수입니다. 기본 데모 펌웨어가 주기적으로 PHY 링크 상태를 확인하기 때문입니다. LAN 연결 없이는 보드가 제대로 작동하지 않으며 RGB LED가 깜박이지 않습니다. 2. **RGB LED 깜박임**: 첫 부팅에서 성공적으로 작동하면, 보드의 RGB LED가 지속적으로 깜박입니다. 이 깜박임은 빨강, 초록, 파랑 LED가 번갈아 가며 켜지는 것을 의미합니다. 3. **RGB LED 깜박임 켜기/끄기**: 버튼1(SW1)을 눌러 RGB LED의 깜박임 상태를 변경할 수 있습니다. 이 작업으로 LED 깜박임을 켜고 끌 수 있습니다. 이 과정에서 보드는 '켜짐' 또는 '꺼짐' 메시지를 시리얼 디버그 포트를 통해 출력합니다. 4. **시리얼 디버그 메시지 출력**: 보드는 USB 포트를 통해 시리얼 '디버그' 메시지를 출력하며, 이는 가상 COM 포트로 작동합니다. 이 메시지들은 네트워크 구성과 루프백 소켓에 대한 정보를 제공합니다. 이 메시지들을 보기 위해서는 시스템의 속성에서 가상 COM 포트 번호를 확인하고, 해당 시리얼 포트에 115200.8.N.1로 설정된 터미널 프로그램을 통해 연결하세요. 5. **루프백 테스트**: 루프백 예제는 TCP와 UDP 세션을 모두 실행합니다. 보드와 PC가 같은 네트워크 범위 내에 구성되어 있는지 확인하세요. 보드 측 네트워크 설정을 [src>>LB_main.c]에서 수정하여 PC의 네트워크 범위와 일치시킬 수 있습니다. TCP의 경우, 보드의 IP 주소로 5000 포트에 연결하기 위해 Hercules와 같은 프로그램을 사용하고, UDP의 경우 보드의 IP 주소로 3000 포트에 데이터를 보낼 수 있습니다. 연결이나 데이터 전송의 성공 여부는 링크 상태 확인, 핑 테스트, 네트워크 구성 검토 및 PC에서 연결을 차단할 수 있는 보안 소프트웨어 확인을 통해 진단해야 합니다. 6. **펌웨어**: W5500 EVB 펌웨어는 LPCXpresso IDE 기반입니다. 이 IDE에 대한 자세한 정보는 NXP LPCXpresso 플랫폼 페이지 [http://www.lpcware.com/lpcxpresso]에서 찾을 수 있습니다. 추가적으로, LPCXpresso IDE의 설치 및 활성화 가이드와 W5500-EVB용 라이브러리 및 애플리케이션 예제 소스 코드는 [https://github.com/Wiznet/W5500_EVB]에서 다운로드할 수 있습니다. 7. **새 프로그램 다운로드**: UART를 통한 플래시 프로그래밍을 위해, W5500 EVB를 ISP 모드로 설정하고, Flash Magic 도구를 실행하여 도구 설정을 구성한 다음, 플래시 프로그래밍을 시작하고 새 프로그램을 실행하세요. 자세한 지침과 설정은 설명서나 온라인 리소스에서 찾을 수 있습니다. 이 단계들을 따르면 W5500 EVB를 성공적으로 시작하고 사용할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 EVB 프로젝트 생성 방법에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 EVB로 새 프로젝트를 만드는 과정에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 EVB를 사용하여 LPCXpresso IDE로 새 프로젝트를 만드는 과정은 다음과 같습니다: 1. 개발 환경 및 컴파일러 설정: NXP LPCXpresso IDE를 다운로드하고 설치합니다. 이 IDE에는 C 컴파일러가 포함되어 있으며, 무료 버전은 최대 8k의 코드를 지원합니다. IDE와 컴파일러는 http://www.lpcware.com/lpcxpresso/download에서 다운로드할 수 있으며, 등록을 완료할 수 있습니다. 2. 프로젝트 생성 및 구성: 'New project'를 선택하고, 'LPC11Exx'를 선택한 다음, 'LPCOpen - C Project'를 프로젝트 유형으로 선택합니다. 3. 라이브러리 가져오기: 필수 라이브러리는 https://github.com/Wiznet/W5500_EVB에서 다운로드합니다. 4. 프로젝트 및 라이브러리 연결: LPCXpresso IDE에서 프로젝트에 필요한 라이브러리를 연결합니다. 5. 프로젝트 완성: 필요한 라이브러리를 선택하고, C/C++ 빌드 명령을 조정하여 펌웨어 이미지를 생성합니다. 자세한 지침은 http://www.nxp.com/documents/other/LPCXpresso_Getting_Started_User_Guide.pdf에서 찾을 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "LPCXpresso IDE 설치 및 활성화 방법에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "LPCXpresso IDE를 어떻게 설치하고 활성화하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "LPCXpresso IDE를 설치하고 활성화하는 방법은 [https://docs.wiznet.io/Product/iEthernet/W5500/W5500-EVB/how-to-install-and-activate-lpcxpresso](https://docs.wiznet.io/Product/iEthernet/W5500/W5500-EVB/how-to-install-and-activate-lpcxpresso)에서 확인할 수 있습니다. 이 과정은 LPCXpresso IDE를 다운로드하고 설치하는 것부터 시작하여, 무료 등록을 통해 코드 용량을 확장하는 활성화 과정을 포함합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico 개발 보드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico는 Raspberry Pi RP2040과 W5500을 기반으로 하는 평가 보드입니다. 이 보드는 추가적인 이더넷 기능을 포함하며, AWS IoT Core Qualified 및 Microsoft Azure Device Certified로 인증되었습니다. 자세한 정보는 [https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico](https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico)에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico 개발 보드의 주요 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico의 주요 특징에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico의 주요 특징은 다음과 같습니다: - RP2040 마이크로컨트롤러는 2MByte 플래시를 포함하고, 최대 133MHz 속도의 듀얼 코어 Cortex M0+ 프로세서, 264kByte 멀티-뱅크 고성능 SRAM, 12-bit 500ksps ADC, UART, I2C, SPI, PWM 채널 등 다양한 기능을 지원합니다. - W5500 칩은 하드와이어 인터넷 프로토콜(TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE), 8개의 독립 하드웨어 소켓, TX/RX 버퍼를 위한 32 Kbytes 메모리, 고속 Serial Peripheral Interface(SPI MODE 0, 3)를 지원합니다. - 보드에는 전원 및 데이터를 위한 Micro-USB B 포트, 40핀 'DIP' 스타일 인터페이스, 3핀 ARM Serial Wire Debug(SWD) 포트, 내장 10 / 100 Ethernet PHY, 내장 RJ45 및 LDO가 포함되어 있습니다. 하드웨어 사양에 대해, W5500-EVB-Pico의 핀아웃은 RP2040의 GPIO에 직접 연결되며, Raspberry Pi Pico 보드의 핀아웃을 반영하며, 일부 GPIO는 W5500과의 SPI 통신을 위해 이더넷 기능에 전용됩니다. W5500-EVB-Pico의 작동 조건에는 최대 온도 85°C(자체 발열 포함), 최소 온도 -20°C, VBUS 및 VSYS에 대한 다양한 전압 사양이 포함됩니다. 보드는 최대 70°C의 주변 온도에서 효과적으로 작동하도록 설계되었습니다. W5500-EVB-Pico에 대한 기술 참조 및 리소스에는 RP2040 및 W5500의 데이터시트, 회로도, 부품 목록, Gerber 파일, 다양한 플랫폼(C/C++, CircuitPython, MicroPython)에 대한 펌웨어 예제, CE 및 FCC 인증 문서가 포함됩니다. 또한 AWS 및 Microsoft Azure 인증을 보유하여 이러한 클라우드 플랫폼과의 호환성 및 신뢰성을 보장합니다. W5500-EVB-Pico는 WIZnetUS 및 WIZnetKorea와 같은 온라인 상점에서 구매할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico에 대한 추가 정보 및 펌웨어 예제에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico에 대한 추가 정보와 펌웨어 예제에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico에 대한 더 많은 정보를 원하시면 다음 URL을 방문하실 수 있습니다: - W5500-EVB-Pico 개요: [https://eshop.wiznet.io/shop/module/w5500-evb-pico/](https://eshop.wiznet.io/shop/module/w5500-evb-pico/) - AWS 파트너 디바이스 카탈로그: [https://devices.amazonaws.com/detail/a3G8a00000311tuEAA/W5500-EVB-Pico](https://devices.amazonaws.com/detail/a3G8a00000311tuEAA/W5500-EVB-Pico) - Microsoft Azure 인증 디바이스 카탈로그: [https://devicecatalog.azure.com/devices/b278ce42-dde1-46b7-919e-4ae3a5266a3c](https://devicecatalog.azure.com/devices/b278ce42-dde1-46b7-919e-4ae3a5266a3c) W5500 펌웨어 예제에 대한 자세한 정보는 다음 링크에서 확인할 수 있습니다: [https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico#firmware-example](https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico#firmware-example) 이 정보들은 W5500-EVB-Pico의 기능과 활용 가능성을 탐색하는 데 도움이 될 것입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "메인 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet 문서 메인 페이지에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "iMCU 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "iMCU 관련 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iMCU"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "Pre-programmed MCU 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "사전 프로그래밍된 MCU 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Pre-programmed-MCU"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "iEthernet 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "이더넷 제품 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "S2E-Module 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "S2E 모듈 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/s2e_module"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "ioModule 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "ioModule 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "App-Module 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "App-Module 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/App-Module"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "Design-Guide 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet 제품 디자인 가이드에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Design-Guide/design_guide"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "VAR-Products-using-WIZnet 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet 제품을 사용하는 VAR 제품 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/VAR-Products-using-WIZnet/var_products_using_wiznet"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100 이더넷 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W6100"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100 데이터시트에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/img/products/w6100/w6100_ds_v105e.pdf"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 참조 회로도에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/ref-schematic"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 비교표에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/comparison-sheet"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S Datasheet ErrataSheet Application 문서에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/document"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S EVB 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-evb"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-pico 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S EVB Pico 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-evb-pico"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-Getting-Started 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 시작하기 가이드에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-getting-started"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-Projects-STM32CubeIDE 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 프로젝트 STM32CubeIDE에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-projects-stm32cubeide"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-Projects-TrueStudio 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 프로젝트 TrueStudio에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-projects-truestudio"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-Projects-Eclipse 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 프로젝트 Eclipse에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-projects-eclipse"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 데이터시트에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/datasheet"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 참조 회로도에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/ref-schematic"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 Application에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/Application"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 EVB 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/W5500-EVB"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-pico 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 EVB Pico 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5300 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5300 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5300/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5300 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5300 DatasheetRefrence Shematics ErrataSheet Application문서에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5300/document"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5300-EVB 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5300 EVB 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5300/w5300-evb"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5300-TOE-Shield 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5300 TOE Shield 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5300/W5300-TOE-Shield"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100 Datasheet ErrataSheet Application문서에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100/document"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100-EVB 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100 EVB 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100/w5100-evb"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "S2E-Module 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "S2E-Module 시리얼 이더넷 가이드에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/serial-to-ethernet-guide"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ750SR 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ750SR 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ750SR"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ750SR-1xx-Series 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ750SR-1xx-Series 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ750SR-1xx-Series"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ752SR-12x-Series 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ752SR-12x-Series 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ752SR-12x-Series"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ500SR-RP-Series 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ500SR-RP-Series 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ5xxSR-RP-Series/WIZ500SR-RP/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ505SR-RP-Series 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ505SR-RP-Series 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ5xxSR-RP-Series/WIZ505SR-RP/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ510SR-RP-Series 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ510SR-RP-Series 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ5xxSR-RP-Series/WIZ510SR-RP/overview"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ505SR-RP-EVB 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ505SR-RP EVB 보드 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ5xxSR-RP-Series/wiz505sr-rp-evb"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ550SR 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ550SR 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/WIZ550SR"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500S2E-S1 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500S2E-S1 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/W5500S2E-S1"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500S2E-Z1 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500S2E-Z1 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/W5500S2E-Z1"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500S2E-R1 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500S2E-R1 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/S2E-Module/W7500S2E-R1"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/W5100S-io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/W5500-io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100-io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/W6100-io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ610io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ610io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz610io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ610mj 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ610mj 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz610mj"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ810Sio 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ810Sio 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz810sio"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ810Smj 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ810Smj 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz810smj"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ850io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ850io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz850io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ550io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ550io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz550io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ820io 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ820io 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz820io"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ810mj 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ810mj 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz810mj"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ811mj 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ811mj 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz811mj"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ812mj 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ812mj 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz812mj"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ830mj 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ830mj 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/ioModule/wiz830mj"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZ550web 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZ550web 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/App-Module/WIZ550web"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizFi630S 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WizFi630S 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Wi-Fi-Module/WizFi630S"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizFi360 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WizFi360 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Wi-Fi-Module/WizFi360"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZwiki-W7500 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZwiki-W7500 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Mbed-WIZwiki-Platform/wizwiki-w7500"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZwiki-W7500P 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZwiki-W7500P 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Mbed-WIZwiki-Platform/wizwiki-w7500p"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZwiki-W7500ECO 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZwiki-W7500ECO 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Mbed-WIZwiki-Platform/wizwiki-w7500eco"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZwiki-W7500-ECO-Shield 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZwiki-W7500-ECO-Shield 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Mbed-WIZwiki-Platform/wizwiki-w7500-eco-shield"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZwiki-W7500-Getting-Started 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZwiki-W7500 시작하기 가이드에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Mbed-WIZwiki-Platform/Getting-Started/how-to-start-wizwiki-w7500-board"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "surf5 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "surf5 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/surf5"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizFi360-EVB-Pico 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WizFi360 EVB Pico 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/wizfi360-evb-pico"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-EVB-Pico 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100 EVB Pico 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W6100/w6100-evb-pico"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet-Ethernet-HAT 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Ethernet HAT 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/wiznet_ethernet_hat"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet-Pico-PoE 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Pico PoE 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/wiznet-pico-poe"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-MKR-Ethernet-Shield 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S MKR Ethernet Shield 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/w5100s_mkr_ethernet_shield"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-MKR-Ethernet-Shield 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100 MKR Ethernet Shield 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/w6100_mkr_ethernet_shield"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizArduino-M0-ETh 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WizArduino M0 ETh 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/wizarduino_m0_eth"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizArduino-Mega-WiFi 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WizArduino Mega WiFi 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/wizarduino_mega_wifi_eng"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-Ethernet-Shield 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 Ethernet Shield 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/w5500_ethernet_shield"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZPoE-S1 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZPoE-S1 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/Open-Source-Hardware/PoE/WIZPoE-S1"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-Driver 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 드라이버 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5500/driver"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-Driver 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 드라이버 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W5100S/driver"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-Driver 카테고리에 대한 정보를 제공합니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100 드라이버 기본 프로젝트 정보에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "자세한 정보는 다음 링크를 참조하세요: https://docs.wiznet.io/Product/iEthernet/W6100/driver-basic-project"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 임베디드 인터넷 컨트롤러에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S란 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S는 WIZnet 기술로 설계된 전체 하드와이어 TCP/IP를 내장한 임베디드 인터넷 컨트롤러입니다. SPI(시리얼 주변 장치 인터페이스) 또는 병렬 시스템 버스를 사용하여 임베디드 시스템에 인터넷 연결성을 제공합니다. SPI 및 병렬 시스템 버스는 외부 MCU를 통해 W5100S에 쉽게 연결할 수 있도록 합니다. W5100S의 SPI 클록 속도는 최대 70MHz를 지원하며 병렬 시스템 버스는 SPI보다 더 높은 속도의 네트워크 통신을 지원합니다. W5100S는 하드와이어 TCP/IP 스택, 10/100 이더넷 MAC 및 PHY를 통합하여 안정적인 인터넷 연결을 위한 진정한 원칩 솔루션을 제공합니다. WIZnet의 하드와이어 TCP/IP 스택은 TCP, UDP, IPv4, ICMP, ARP, IGMP, PPPoE를 지원하며 지난 10년간 다양한 애플리케이션을 통해 그 성능이 입증되었습니다. W5100S는 동시에 사용할 수 있는 4개의 독립적인 소켓과 데이터 통신을 위한 16KB 내부 메모리를 제공합니다. 사용자는 복잡한 이더넷 컨트롤러를 다루는 대신 간단한 W5100S 소켓 프로그램을 사용하여 이더넷 애플리케이션을 쉽게 개발할 수 있습니다. W5100S는 전력 소비를 줄이기 위해 WOL(Wake on LAN) 및 파워 다운 모드를 제공합니다. W5100S는 전작인 W5100보다 우수한 저비용 칩입니다. W5100을 사용하는 기존 펌웨어는 수정 없이 W5100S에서 사용할 수 있습니다. W5100S는 48핀 LQFP 및 QFN 무연 패키지의 두 가지 유형의 패키지를 가지고 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 칩의 특징에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 칩의 특징에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 칩은 다음과 같은 특징을 지니고 있습니다: - 하드와이어 인터넷 프로토콜 지원: TCP, UDP, WOL(Wake on LAN) over UDP, ICMP, IGMPv1/v2, IPv4, ARP, PPPoE - 동시에 4개의 독립적인 하드웨어 소켓 지원 - 소켓 없는 명령 지원: ARP-Request, PING-Request - 전력 절약을 위한 이더넷 파워 다운 모드 및 메인 클록 게이팅 지원 - UDP를 통한 Wake on LAN 지원 - 시리얼 및 병렬 호스트 인터페이스 지원: 고속 SPI(MODE 0/3), 2개의 주소 신호 및 8비트 데이터를 가진 병렬 시스템 버스 - 내부 16 Kbytes 메모리는 TX/ RX 버퍼용 - IP 단편화 지원 안 함 - ARP-캐시 테이블 유지 관리 안 함 - 통합된 10BaseT/100BaseTX 이더넷 PHY - 자동 협상 지원(전이중/반 이중, 10/100 속도) - 자동 협상 모드에서 Auto-MDIX 지원 - 3.3V 작동 전압 및 5V I/O 신호 허용 - LED 출력(전이중/반 이중, 링크, 10/100 속도, 활성) - 두 가지 유형의 패키지: 48핀 LQFP & QFN 무연 패키지(7x7mm, 0.5mm 피치)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 칩의 적용 분야에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 칩이 타겟으로 하는 애플리케이션은 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 칩은 다음과 같은 애플리케이션에 적합합니다: - W5100 기반 사용자 제품: 펌웨어 수정 필요 없음 - 홈 네트워크 장치: 셋톱박스, PVR, 디지털 미디어 어댑터 - 시리얼-이더넷: 접근 제어 시스템, LED 디스플레이, 무선 AP 릴레이 등 - 병렬-이더넷: POS/미니 프린터, 복사기 - USB-이더넷: 저장 장치, 네트워크 프린터 - GPIO-이더넷: 홈 네트워크 센서 - 보안 시스템: DVR, 네트워크 카메라, 키오스크 - 공장, 건물, 홈 자동화 - 의료 모니터링 장비 - 임베디드 서버 - 사물 인터넷(IoT) 장치 - IoT 클라우드 장치"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 임베디드 인터넷 컨트롤러에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S란 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S는 WIZnet 기술로 설계된 전체 하드와이어 TCP/IP를 내장한 임베디드 인터넷 컨트롤러입니다. SPI(시리얼 주변 장치 인터페이스) 또는 병렬 시스템 버스를 사용하여 임베디드 시스템에 인터넷 연결성을 제공합니다. SPI 및 병렬 시스템 버스는 외부 MCU를 통해 W5100S에 쉽게 연결할 수 있도록 합니다. W5100S의 SPI 클록 속도는 최대 70MHz를 지원하며 병렬 시스템 버스는 SPI보다 더 높은 속도의 네트워크 통신을 지원합니다. W5100S는 하드와이어 TCP/IP 스택, 10/100 이더넷 MAC 및 PHY를 통합하여 안정적인 인터넷 연결을 위한 진정한 원칩 솔루션을 제공합니다. WIZnet의 하드와이어 TCP/IP 스택은 TCP, UDP, IPv4, ICMP, ARP, IGMP, PPPoE를 지원하며 지난 10년간 다양한 애플리케이션을 통해 그 성능이 입증되었습니다. W5100S는 동시에 사용할 수 있는 4개의 독립적인 소켓과 데이터 통신을 위한 16KB 내부 메모리를 제공합니다. 사용자는 복잡한 이더넷 컨트롤러를 다루는 대신 간단한 W5100S 소켓 프로그램을 사용하여 이더넷 애플리케이션을 쉽게 개발할 수 있습니다. W5100S는 전력 소비를 줄이기 위해 WOL(Wake on LAN) 및 파워 다운 모드를 제공합니다. W5100S는 전작인 W5100보다 우수한 저비용 칩입니다. W5100을 사용하는 기존 펌웨어는 수정 없이 W5100S에서 사용할 수 있습니다. W5100S는 48핀 LQFP 및 QFN 무연 패키지의 두 가지 유형의 패키지를 가지고 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 칩의 특징에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 칩의 특징에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 칩은 다음과 같은 특징을 지니고 있습니다: - 하드와이어 인터넷 프로토콜 지원: TCP, UDP, WOL(Wake on LAN) over UDP, ICMP, IGMPv1/v2, IPv4, ARP, PPPoE - 동시에 4개의 독립적인 하드웨어 소켓 지원 - 소켓 없는 명령 지원: ARP-Request, PING-Request - 전력 절약을 위한 이더넷 파워 다운 모드 및 메인 클록 게이팅 지원 - UDP를 통한 Wake on LAN 지원 - 시리얼 및 병렬 호스트 인터페이스 지원: 고속 SPI(MODE 0/3), 2개의 주소 신호 및 8비트 데이터를 가진 병렬 시스템 버스 - 내부 16 Kbytes 메모리는 TX/ RX 버퍼용 - IP 단편화 지원 안 함 - ARP-캐시 테이블 유지 관리 안 함 - 통합된 10BaseT/100BaseTX 이더넷 PHY - 자동 협상 지원(전이중/반 이중, 10/100 속도) - 자동 협상 모드에서 Auto-MDIX 지원 - 3.3V 작동 전압 및 5V I/O 신호 허용 - LED 출력(전이중/반 이중, 링크, 10/100 속도, 활성) - 두 가지 유형의 패키지: 48핀 LQFP & QFN 무연 패키지(7x7mm, 0.5mm 피치)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 칩의 적용 분야에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 칩이 타겟으로 하는 애플리케이션은 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 칩은 다음과 같은 애플리케이션에 적합합니다: - W5100 기반 사용자 제품: 펌웨어 수정 필요 없음 - 홈 네트워크 장치: 셋톱박스, PVR, 디지털 미디어 어댑터 - 시리얼-이더넷: 접근 제어 시스템, LED 디스플레이, 무선 AP 릴레이 등 - 병렬-이더넷: POS/미니 프린터, 복사기 - USB-이더넷: 저장 장치, 네트워크 프린터 - GPIO-이더넷: 홈 네트워크 센서 - 보안 시스템: DVR, 네트워크 카메라, 키오스크 - 공장, 건물, 홈 자동화 - 의료 모니터링 장비 - 임베디드 서버 - 사물 인터넷(IoT) 장치 - IoT 클라우드 장치"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 칩에 대한 문서와 자료를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 칩에 대한 문서와 자료를 요약해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 칩에 대한 주요 문서 및 자료는 다음과 같습니다: - **W5100S 데이터시트**: 제품의 기술적 세부사항을 제공합니다. 링크: https://www.wiznet.io/wp-content/uploads/wiznethome/Chip/W5100/Document/W5100_DS_V128E.pdf - **W5100S 에러 시트**: 제품의 알려진 문제점과 해결 방법을 제공합니다. 링크: https://docs.wiznet.io/img/products/w5100s/w5100s-errata-en-v100.pdf - **W5100S vs W5100 비교 시트**: 두 제품 간의 주요 차이점을 비교합니다. 링크: https://docs.wiznet.io/img/products/w5100s/application/w5100svsw5100_cs_v110e.pdf - **TCP, UDP, IPRAW, PPPoE, SOCKET-less Command(SLC), Interrupt**: 이러한 기능을 설정하고 운영하는 방법에 대한 안내를 포함한 애플리케이션 노트. 각 기능에 대한 링크는 위에 제공된 바와 같습니다. 이 자료들은 W5100S를 사용하여 네트워크 연결성을 개발하는 개발자에게 유용한 정보를 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S TCP 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S의 TCP 기능은 어떻게 작동하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 TCP 기능을 사용하여 인터넷 연결성을 제공합니다. 이 기능은 몇 가지 레지스터와 메모리 작업 설정을 통해 운영됩니다. 자세한 운영 방법은 [https://docs.wiznet.io/Product/iEthernet/W5100S/Application-Note/tcp](https://docs.wiznet.io/Product/iEthernet/W5100S/Application-Note/tcp)에서 설명합니다. 이 문서는 W5100S를 사용하여 TCP 네트워크 통신을 구현하는 방법에 대한 지침을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S UDP 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S의 UDP 기능은 어떻게 사용하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 UDP 기능은 몇 가지 레지스터와 메모리 작업 설정을 통해 인터넷 연결성을 제공합니다. 이 기능의 운영 방법은 [https://docs.wiznet.io/Product/iEthernet/W5100S/Application-Note/udp](https://docs.wiznet.io/Product/iEthernet/W5100S/Application-Note/udp)에서 자세히 설명합니다. 문서는 W5100S를 사용하여 UDP 기반 통신을 구현하는 과정을 안내합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S IPRAW 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S에서 IPRAW 모드를 어떻게 사용하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 IPRAW 모드는 IP 계층의 상위 프로토콜을 직접 처리할 수 있도록 합니다. ICMP, IGMP, TCP, UDP 등의 프로토콜을 기반으로 하는 애플리케이션을 구현할 수 있습니다. IPRAW 모드 사용 방법은 한국어 [https://docs.wiznet.io/img/products/w5100s/w5100s_an_ipraw_v100k.pdf](https://docs.wiznet.io/img/products/w5100s/w5100s_an_ipraw_v100k.pdf) 및 영어 [https://docs.wiznet.io/img/products/w5100s/w5100s_an_ipraw_v100e.pdf](https://docs.wiznet.io/img/products/w5100s/w5100s_an_ipraw_v100e.pdf) 버전의 문서에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S PPPoE 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S에서 PPPoE를 어떻게 설정하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 PPPoE 기능은 인터넷 서비스 제공자(ISP)를 통한 네트워크 연결을 설정하는 데 사용됩니다. PPPoE 설정 방법은 한국어 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_pppoe_v100k.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_pppoe_v100k.pdf) 및 영어 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_pppoe_v100e.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_pppoe_v100e.pdf) 버전의 문서에서 자세히 설명합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S SOCKET-less Command(SLC) 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S에서 SOCKET-less Command(SLC)는 어떻게 작동하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 SOCKET-less Command(SLC) 기능은 별도의 소켓 할당 없이 ARP-Request, PING-Request와 같은 네트워크 명령을 실행할 수 있게 합니다. SLC 기능의 사용 방법은 한국어 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_slc_v100k.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_slc_v100k.pdf) 및 영어 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_slc_v100e.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_slc_v100e.pdf) 버전의 문서에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S Interrupt 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S에서 Interrupt 기능은 어떻게 활용하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 Interrupt 기능은 네트워크 이벤트에 반응하여 처리를 수행할 수 있게 합니다. 이 기능을 통해 효율적인 네트워크 이벤트 관리가 가능합니다. Interrupt 기능의 활용 방법은 한국어 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_interrupt_v110k.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_interrupt_v110k.pdf) 및 영어 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_interrupt_v100e.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_interrupt_v100e.pdf) 버전의 문서에서 상세하게 설명합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S Interrupt 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S에서 Interrupt 기능은 어떻게 활용하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S의 Interrupt 기능은 네트워크 이벤트에 반응하여 처리를 수행할 수 있게 합니다. 이 기능을 통해 효율적인 네트워크 이벤트 관리가 가능합니다. Interrupt 기능의 활용 방법은 영어 버전의 문서 [https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_interrupt_v100e.pdf](https://docs.wiznet.io/img/products/w5100s/application/w5100s_an_interrupt_v100e.pdf)에서 상세하게 설명합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 크리스탈 선택 가이드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 크리스탈을 선택할 때 고려해야 할 사항은 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 크리스탈 선택 시 고려해야 할 사항은 한국어 버전 가이드 [https://docs.wiznet.io/img/products/w5100s/w5100s_crystal_selection_guide_v100k.pdf](https://docs.wiznet.io/img/products/w5100s/w5100s_crystal_selection_guide_v100k.pdf)에서 자세히 설명합니다. 이 가이드는 W5100S에 적합한 크리스탈을 선택하는 데 필요한 기술적 세부 사항과 권장 사항을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 크리스탈 선택 가이드 (영어)에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "How should I select a crystal for the W5100S?"
+            },
+            {
+                "role": "assistant",
+                "content": "The considerations for selecting a crystal for the W5100S are detailed in the English version of the guide [https://docs.wiznet.io/img/products/w5100s/w5100s_crystal_selection_guide_v100e.pdf](https://docs.wiznet.io/img/products/w5100s/w5100s_crystal_selection_guide_v100e.pdf). This guide provides the technical details and recommendations necessary for choosing the appropriate crystal for the W5100S."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S IR 리플로우 프로파일에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S를 위한 IR 리플로우 프로파일은 어떻게 설정하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S를 위한 IR 리플로우 프로파일 설정 방법은 [https://docs.wiznet.io/img/design_guide/reflow_profile/ir_reflow_profile.pdf](https://docs.wiznet.io/img/design_guide/reflow_profile/ir_reflow_profile.pdf) 문서에서 확인할 수 있습니다. 이 문서는 W5100S 하드웨어 설계 시 고려해야 할 리플로우 솔더링 과정의 온도 프로파일을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 외부 변환기 타입 참조 스키매틱에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 외부 변환기 타입 참조 스키매틱은 어디에서 찾을 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 외부 변환기 타입에 대한 참조 스키매틱은 [https://github.com/Wiznet/Hardware-Files-of-WIZnet/tree/master/02_iEthernet/W5100S/Reference%20Schematic](https://github.com/Wiznet/Hardware-Files-of-WIZnet/tree/master/02_iEthernet/W5100S/Reference%20Schematic)에서 확인할 수 있습니다. 이 링크는 W5100S를 사용하여 네트워크 연결을 구현할 때 필요한 외부 변환기와 관련된 디자인 파일을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S RJ45 변환기 내장 타입 참조 스키매틱에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S RJ45 변환기 내장 타입 참조 스키매틱은 어디에서 찾을 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S RJ45 변환기 내장 타입에 대한 참조 스키매틱은 [https://github.com/Wiznet/Hardware-Files-of-WIZnet/tree/master/02_iEthernet/W5100S/Reference%20Schematic](https://github.com/Wiznet/Hardware-Files-of-WIZnet/tree/master/02_iEthernet/W5100S/Reference%20Schematic)에서 확인할 수 있습니다. 이 링크는 W5100S를 사용하여 네트워크 연결을 구현할 때 필요한 RJ45 변환기 내장 타입과 관련된 디자인 파일을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB 보드에 대한 펌웨어 다운로드 링크 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB 보드의 펌웨어 다운로드 링크는 어디에서 찾을 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB 보드의 펌웨어는 [https://github.com/Wiznet/W5100S-EVB](https://github.com/Wiznet/W5100S-EVB)에서 다운로드할 수 있습니다. W5100S-EVB는 W5100S 칩을 위한 평가 보드로, 32비트 ARM® Cortex™-M3 마이크로컨트롤러를 기반으로 합니다. 이 보드는 WIZnet의 하드와이어 TCP/IP 내장 이더넷 컨트롤러인 W5100S를 사용하여 효율적이고 컴팩트한 임베디드 시스템의 인터넷 연결 개발을 용이하게 하도록 설계되었습니다. 또한, 'Arduino UNO Rev3' 및 기타 발자국 호환 보드에 대해 'Arduino shields'와 하드웨어 핀 호환성을 가지고 설계되었습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB의 마이크로컨트롤러에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB의 마이크로컨트롤러는 STM32F103VCT6입니다. 이것은 최대 72MHz 속도로 동작할 수 있는 32비트 ARM Cortex-M3 MCU입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB의 메모리 구성은 어떻게 되나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB는 256kB 또는 512kB의 플래시 메모리를 갖고 있으며 64kB의 SRAM이 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB에서 사용 가능한 인터페이스에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB에는 BUS, SPI/SSP, I2C, UART, ADC, PWM 및 기타 I/O 인터페이스와 같은 다양한 인터페이스가 제공됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB에 추가 구성 요소가 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "네, W5100S-EVB에는 두 개의 프로그래밍 가능한 푸시 버튼, 상태 표시용 RGB LED 및 이더넷 연결을 위한 10/100 Base-Tx RJ-45 커넥터가 포함되어 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB의 마이크로컨트롤러에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB의 마이크로컨트롤러는 STM32F103VCT6입니다. 이것은 최대 72MHz 속도로 동작할 수 있는 32비트 ARM Cortex-M3 MCU입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S Chip의 기능에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S Chip은 하드웨어 기반의 TCP/IP 장착형 이더넷 컨트롤러이며, 16kB 내부 Tx/Rx 소켓 버퍼(4개 소켓)를 갖고 있습니다. 지원되는 프로토콜로는 TCP, UDP, WOL over UDP, ICMP, IGMPv1/v2, IPv4, ARP, PPPoE가 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB의 연결자에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB에는 이더넷, 가상 COM 포트(Micro USB B 타입), GPIO(80개, 12비트 ADC 아날로그 주변 장치 포함), Arduino UNO Rev3용 쉴드와 핀 호환 가능한 연결자가 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB의 기타 사양을 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB에는 2개의 사용자 프로그래밍 가능한 푸시 버튼, 1개의 RGB LED, 산업용 (-40 to +85 degrees Celsius) 온도 범위, [Reset] 및 [boot0] 버튼, 5V DC 전원 공급, GPIO 입력 0~~5V 및 출력 0~~3.3V, 4레이어 PCB(FR-4 재질, 1.6T, 1oz), Arduino 호환 SWD 헤더 핀아웃이 포함됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB의 리소스 정보를 알고 있는 전문가 입니다."
+            },
+            {
+                "role": "user",
+                "content": "STM32F103VCT6 MCU에 대한 자세한 정보가 어디에서 확인할 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "STM32F103VCT6 MCU에 대한 자세한 정보는 다음 링크에서 확인할 수 있습니다: [STM32F103VCT6 MCU Details](https://www.st.com/en/microcontrollers-microprocessors/stm32f103vc.html)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico에 대한 자세한 정보는 어디에서 확인할 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico에 대한 자세한 정보는 다음 링크에서 확인할 수 있습니다: [W5100S-EVB-PiCO Docs](https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-evb-pico)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico의 주요 특징은 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico는 라즈베리 파이 RP2040을 기반으로 한 마이크로컨트롤러 평가 보드로, W5100S와 완전하게 하드웨어 기반 TCP/IP 컨트롤러를 사용합니다. 이 보드는 기본적으로 라즈베리 파이 Pico 보드와 동일하게 작동하지만 W5100S를 통해 추가 이더넷 기능을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico는 라즈베리 파이 Pico의 클론인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "네, W5100S-EVB-Pico는 라즈베리 파이 Pico의 클론입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "Azure Certified Device 카탈로그에서 어떻게 확인할 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "Azure Certified Device 카탈로그에서 W5100S-EVB-Pico를 확인하려면 다음 링크를 참조하십시오: [Azure Certified Device Catalog](https://devicecatalog.azure.com/devices/9171d1ae-eb6d-4636-b512-611dc96bc2c7)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "AWS IoT Core Qualified인데, 어떻게 시작할 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico를 AWS IoT Core Qualified로 시작하려면 다음 가이드를 참조하십시오: [AWS IoT Core Getting Started Guide](https://docs.wiznet.io/img/products/w5100s-evb-pico/w5100s-evb-pico-getting-started-guide-for-aws-iot-core-v1-1-0.pdf)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 특징스펙입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico의 기술적인 사양(스펙) 특징은 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico의 기술적인 사양은 다음과 같습니다:\n\n- RP2040 마이크로컨트롤러 (2 MB 플래시)\n- 듀얼 코어 Cortex M0+ (최대 133 MHz)\n- 264 KB SRAM\n- 외부 Quad-SPI 플래시 (XIP 지원)\n- 30개의 멀티 기능 GPIO (4개는 ADC로 사용 가능)\n- 12비트 500 ksps ADC\n- 디지털 주변 장치: 2개 UART, 2개 I2C, 2개 SPI, 16개 PWM, 1개 타이머, 1개 RTC\n- 2개 PIO 블록과 8개의 상태 머신\n\n**Ethernet Connectivity:**\n\n- W5100S 하드웨어 기반 TCP/IP 칩\n- TCP, UDP, WOL, ICMP, IGMP, IPv4, ARP, PPPoE 지원\n- 4개의 독립적인 하드웨어 소켓\n- 16 KB 내부 TX/RX 버퍼\n- SPI 인터페이스\n\n**물리적 특성:**\n\n- 전원/데이터용 마이크로-USB B 포트\n- 스루홀 핀과 캐스테이션을 갖춘 40핀 DIP 스타일 PCB\n- 3핀 ARM SWD 포트\n- 10/100 이더넷 PHY 내장\n- RJ45 커넥터\n- 내장형 LDO\n\n**추가 정보:**\n\n- AWS IoT Core Qualified\n- Microsoft Azure Device Certified"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 하드웨어 스펙입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico의 하드웨어 스펙에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico의 하드웨어 스펙은 다음과 같습니다:\n\n![W5100S-EVB-Pico.png](W5100S%20f0dcdd0107af4ad0b9176ced58c5bac4/W5100S-EVB-Pico.png)\n\nW5100S-EVB-Pico의 핀 아웃은 위의 그림에 표시된 대로 RP2040의 GPIO에 직접 연결됩니다. 이 보드는 Raspberry Pi Pico 보드와 동일한 핀 아웃을 갖고 있지만 GPIO16, GPIO17, GPIO18, GPIO19, GPIO20, GPIO21은 보드 내부의 W5100S에 연결되어 있습니다. 이러한 핀은 이더넷 기능을 사용하기 위한 SPI 통신을 활성화합니다. 이더넷 기능을 사용하는 경우, 이러한 핀은 다른 목적으로 사용할 수 없습니다.\n\nRP2040 내부에서 사용되는 GPIO는 다음과 같습니다.\n\n**| I/O 핀 | 이름 | 설명 |**\n\n**|---|---|---|**\n\n**| GPIO16 | MISO | W5100의 MISO에 연결 |**\n\n**| GPIO17 | CSn | W5100의 CSn에 연결 |**\n\n**| GPIO18 | SCLK | W5100의 SCLK에 연결 |**\n\n**| GPIO19 | MOSI | W5100의 MOSI에 연결 |**\n\n**| GPIO20 | RSTn | W5100의 RSTn에 연결 |**\n\n**| GPIO21 | INTn | W5100의 INTn에 연결 |**\n\n**| GPIO24 | VBUS sense | VBUS가 존재하면 높고, 그렇지 않으면 낮음 |**\n\n**| GPIO25 | LED | 사용자 LED에 연결 |**\n\n**| GPIO29 | ADC3 | ADC 모드(ADC3)에서 사용 (VSYS/3 측정) |**\n\nGPIO와 그라운드 핀 외에도 40핀 인터페이스에는 다른 7개의 핀이 있습니다.\n\n**| 핀 번호 | 핀 이름 | 설명 |**\n\n**|---|---|---|**\n\n**| 40 | VBUS | 마이크로-USB 입력 전압, 마이크로-USB 포트 핀 1에 연결. 일반적으로 5V. |**\n\n**| 39 | VSYS | 주요 시스템 입력 전압, 허용 범위 내에서 변할 수 있으며, 온보드 LDO가 3.3V을 생성하는 데 사용됩니다. |**\n\n**| 37 | 3V3_EN | 온보드 LDO 활성화 핀에 연결. 3.3V를 비활성화하려면 이 핀을 낮게 연결합니다(이로 인해 RP2040 및 W5100S도 전원이 차단됩니다). |**\n\n**| 36 | 3V3 | RP2040 및 W5100S에 대한 주요 3.3V 공급, 온보드 LDO에서 생성됨. |**\n\n**| 35 | ADC_VREF | ADC 전원 공급 (및 참조) 전압, 3.3V 공급을 필터링하여 W5100S-EVB-Pico에서 생성됩니다. |**\n\n**| 33 | AGND | GPIO26-29의 지상 참조. |**\n\n**| 30 | RUN | RP2040 활성화 핀. RP2040을 재설정하려면 이 핀을 낮게 연결합니다. |**\n\n**운영 조건:**\n\n**| 항목 | 설명 |**\n\n**|---|---|**\n\n**| 최대 운영 온도 | 85도 (자체 발열 포함) |**\n\n**| 최소 운영 온도 | -20도 |**\n\n**| VBUS | DC 5V (+/- 10%) |**\n\n**| VSYS 최소 | DC 4.3V |**\n\n**| VSYS 최대 | DC 5.5V |**\n\n추천되는 최대 주변 온도는 70도입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB 시작 가이드입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB를 시작하는 방법은 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB를 시작하는 방법은 다음 링크에서 확인하실 수 있습니다: [Getting Started with W5100S-EVB](https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-getting-started) 위 링크를 참조하는 것을 추천합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB 프로젝트를 STM32CubeIDE로 만드는 방법입니다."
+            },
+            {
+                "role": "user",
+                "content": "STM32CubeIDE를 사용하여 W5100S-EVB 프로젝트를 어떻게 만들 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "STM32CubeIDE를 사용하여 W5100S-EVB 프로젝트를 만드는 방법은 다음 링크에서 확인하실 수 있습니다: [Make New W5100S-EVB Projects using STM32CubeIDE](https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-projects-stm32cubeide) 위 링크를 참조하는 것을 추천합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "TrueSTUDIO를 사용하여 W5100S-EVB 프로젝트를 만드는 방법입니다."
+            },
+            {
+                "role": "user",
+                "content": "TrueSTUDIO를 사용하여 W5100S-EVB 프로젝트를 어떻게 만들 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "TrueSTUDIO를 사용하여 W5100S-EVB 프로젝트를 만드는 방법은 다음 링크에서 확인하실 수 있습니다: [Make New W5100S-EVB Projects using TrueSTUDIO](https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-projects-truestudio) 위 링크를 참조하는 것을 추천합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "Eclipse를 사용하여 W5100S-EVB 프로젝트를 만드는 방법입니다."
+            },
+            {
+                "role": "user",
+                "content": "Eclipse를 사용하여 W5100S-EVB 프로젝트를 어떻게 만들 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "Eclipse를 사용하여 W5100S-EVB 프로젝트를 만드는 방법은 다음 링크에서 확인하실 수 있습니다: [Make New W5100S-EVB Projects using Eclipse](https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-projects-eclipse) 위 링크를 참조하는 것을 추천합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500에 관한 기본 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500은 어떤 기능과 특징을 가지고 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W7500은 IOP4IoT 시리즈의 일부로, ARM Cortex-M0 코어를 기반으로 하며 최대 48MHz의 주파수를 지원합니다. 이 칩은 TCP/IP 코어를 내장하고 있으며 TCP, UDP, IPv4, ICMP, ARP, IGMP 및 PPPoE를 지원하는 시장에서 검증된 스택을 제공합니다. 이 TCP/IP 코어는 15년 이상에 걸쳐 다양한 애플리케이션에서 사용되어 신뢰성 있는 인터넷 연결을 제공합니다.\n\nW7500은 128 KB 플래시 메모리, 16 KB SRAM 및 부트 코드용 6 KB ROM을 비롯한 중요한 메모리 기능을 자랑합니다. 전원 및 클럭 관리를 효율적으로 처리하기 위해 Power-On Reset (POR), 3.3V에서 1.5V로 조절 가능한 내부 전압 레귤레이터, 8MHz에서 24MHz로 외부 크리스탈 오실레이터, 내부 8MHz RC 오실레이터 및 CPU 클럭용 PLL과 같은 기능을 갖추고 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500의 메모리 및 클럭 관리에 대한 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 메모리 및 클럭 관리는 어떻게 되나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W7500의 메모리 및 클럭 관리는 다음과 같습니다:\n\n- 128 KB 플래시 메모리\n- 16 KB SRAM\n- 부트 코드용 6 KB ROM\n- Power-On Reset (POR)\n- 3.3V에서 1.5V로 조절 가능한 내부 전압 레귤레이터\n- 8MHz에서 24MHz로 외부 크리스탈 오실레이터\n- 내부 8MHz RC 오실레이터\n- CPU 클럭용 PLL"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500의 주변 장치 및 인터페이스에 대한 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 주변 장치와 인터페이스는 어떤 것들이 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W7500의 주변 장치 및 인터페이스는 다음과 같습니다:\n\n- 12비트 ADC (8개 채널, 1Mbps 지원)\n- 6개 채널 DMA 컨트롤러 (UART 및 SPI와 같은 주변 장치 지원)\n- 53개의 I/O 핀\n- Serial Wire Debug (SWD)를 통한 디버깅 지원\n- 다중 타이머 및 PWM (32비트 워치독 타이머, 4개의 32비트 또는 16비트 다운 카운터, 프로그램 가능한 6비트 프리스케일러 포함)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500의 통신 인터페이스에 대한 정보입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500은 어떤 통신 인터페이스를 제공하나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W7500은 다음과 같은 통신 인터페이스를 제공합니다:\n\n- 3개의 UART (FIFO 및 Flow Control를 지원하는 2개와 단순한 UART 1개)\n- 2개의 SPI\n- Fast-mode (400 kbps)에서 작동하는 2개의 I2C 인터페이스\n- 32비트 난수 발생기 (Random Number Generator)를 포함한 암호화 기능"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500의 기타 정보와 관련 링크입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500 관련 추가 정보나 링크가 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W7500에 관한 더 많은 정보와 관련된 링크는 다음과 같습니다:\n\n- 핀 할당 (Pin Assignment): [링크](https://docs.wiznet.io/Product/iMCU/W7500/pin-assignment)\n- 시스템 및 메모리 (System and Memory): [링크](https://docs.wiznet.io/Product/iMCU/W7500/system-and-memory)\n- 인터럽트 및 이벤트 (Interrupt and Events): [링크](https://docs.wiznet.io/Product/iMCU/W7500/interrupt-and-event)\n- 전원 공급 (Power Supply): [링크](https://docs.wiznet.io/Product/iMCU/W7500/power-supply)\n- 부팅 순서 (Booting Sequence): [링크](https://docs.wiznet.io/Product/iMCU/W7500/booting-sequence)\n- 전기적 특성 (Electrical Characteristics): [링크](https://docs.wiznet.io/Product/iMCU/W7500/electrical-characteristics-w7500)\n- W7500 참고 기구도 (W7500 Reference Schematic): [링크](https://docs.wiznet.io/Product/iMCU/W7500/w7500-ref-schematic)"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 시스템 및 메모리 구성 요소에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 시스템과 메모리 구성 요소에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500의 주요 시스템은 Cortex-M0 코어와 uDMAC(PL230, 6채널) 두 개의 마스터로 구성되어 있습니다. 또한, 내부 BOOT ROM, 내부 SRAM, 내부 플래시 메모리, 모든 APB 주변 장치를 연결하는 두 개의 AHB2APB 브릿지, 16비트 GPIO에 전용된 네 개의 AHB, TCP/IP 하드웨어 코어 등 열 개의 슬레이브가 포함되어 있습니다. 메모리 구성은 단일 선형 4-Gbyte 주소 공간 내에 프로그램 메모리, 데이터 메모리, 레지스터, I/O 포트가 모두 조직되어 있으며, Little Endian 형식을 사용합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 인터럽트 및 이벤트 처리 시스템에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 인터럽트 및 이벤트 시스템에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500 마이크로컨트롤러는 25개의 인터럽트 요청(IRQ) 라인, 하나의 NonMaskable Interrupt(NMI), 하나의 이벤트 신호를 포함하는 포괄적인 인터럽트 및 이벤트 처리 시스템을 특징으로 합니다. 다양한 시스템 이벤트와 작업을 효율적으로 처리하기 위해 설계되었습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 전원 공급 시스템에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 전원 공급 시스템에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500 마이크로컨트롤러는 효율적인 전력 관리와 운영을 보장하는 잘 설계된 전원 공급 시스템을 통합하고 있습니다. 내부 1.5V 디지털 전력 도메인에 전원을 공급하기 위해 전압 조절기를 내장하고 있으며, 운영 공급 전압(VDD)은 2.7V에서 5.5V 사이입니다. 저전력 모드로는 Sleep 모드와 Deep Sleep 모드가 있으며, CPU가 활성화될 필요가 없을 때 전력을 절약할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 부팅 순서에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 부팅 순서에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500 마이크로컨트롤러는 BOOT 및 TEST 핀을 사용하여 선택할 수 있는 세 가지 독특한 부팅 모드를 제공합니다. 이 모드는 W7500이 시작되고 운영되는 방식을 결정합니다. APP 모드에서는 주 플래시 메모리에서 사용자 코드를 실행하며, ISP 모드는 시스템 프로그래밍 기능을 지원합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 전기적 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 전기적 특성에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500 마이크로컨트롤러는 다양한 애플리케이션에서 효과적이고 신뢰성 있는 성능을 보장하는 다양한 전기적 특성으로 설계되었습니다. 절대 최대 등급, 전압 특성, 전류 특성, 열 특성, 운영 조건, 공급 전류 특성, I/O PAD 특성, 플래시 메모리, 전기적 민감성 특성, ADC 특성, I2C 인터페이스 특성, SSP 인터페이스 특성, 패키지 특성 등을 포함합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 전기적 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 절대 최대 등급에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "절대 최대 등급은 장치의 스트레스 한계를 정의합니다. W7500은 기술적으로 이러한 극단적인 상황에서 작동할 수 있지만, 이러한 조건은 장치의 신뢰성에 영향을 줄 수 있으므로 장기간에 걸쳐 의도된 것이 아닙니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 전압 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 전압 특성에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500은 외부 주 전원(VDD-VSS)이 -0.3V에서 3.6V 사이여야 합니다. IO 핀(VIN)의 입력 전압도 VSS - 0.3V에서 3.6V 사이에 있어야 합니다. 장치에는 I/O 전력 경사를 관리하기 위한 전압 조절기가 포함되어 있으며, 다양한 VDD 전원 핀과 접지 핀 간의 변동에 대한 사양도 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 전류 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 전류 특성에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "전류 특성은 모든 VDD 전원 라인으로 들어가는 총 전류, 각 VDD 전원 핀으로 들어가는 최대 전류, 모든 IO와 제어 핀에 의해 가라앉는 총 출력 전류, 단일 핀 입력 주입 전류 한계 및 모든 입력 주입 전류 합계의 한계를 자세히 설명합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 열 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 열 특성에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500은 지정된 저장 온도 범위와 편향 상태에서의 최대 접합 온도를 가지고 있어 다양한 온도 조건에서의 운영 탄력성을 나타냅니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 운영 조건에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 운영 조건에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "운영 조건은 내부 CPU 클록 주파수, 표준 운영 전압, 핀의 입력 전압, 주변 온도, 접합 온도 범위를 포함하여 W7500이 최적으로 작동하는 일반적인 환경 조건을 정의합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 공급 전류 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 공급 전류 특성에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "공급 전류 특성은 정상 운영, 수면 모드 및 깊은 수면 모드에서의 공급 전류 세부 사항을 포함합니다. 전류 소비량은 시스템 클록 주파수와 장치의 운영 모드에 따라 달라집니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 I/O PAD 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 I/O PAD 특성에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "I/O PAD 특성은 I/O 입력 고전압 및 저전압, 슈미트 트리거 히스테리시스, I/O 입력 고전류 및 저전류, I/O 출력 고전압 및 저전압, 풀업/풀다운 저항 값에 대한 필수 세부 사항을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 플래시 메모리에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 플래시 메모리에 대해 설명해주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W7500의 플래시 메모리 내구성과 데이터 유지 능력이 강조되어 장기간에 걸쳐 견고한 데이터 저장 및 검색을 보장합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 전기적 민감성 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 전기적 민감성 특성에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "전기적 민감성 특성에는 전기적으로 불안정한 환경에서 장치의 무결성을 유지하는 데 중요한 전기 정전 방전(ESD) 및 정적 래치업 사양이 포함됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 ADC 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 ADC 특성에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "ADC 특성 섹션은 아날로그 입력 채널, 참조 전압, 해상도 및 오류(예: 전체 비선형성 및 차동 비선형성)와 같은 아날로그-디지털 변환기의 기능에 대한 세부 정보를 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 I2C 인터페이스 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 I2C 인터페이스 특성에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "I2C 인터페이스 특성은 표준 및 고속 모드에서 I2C 인터페이스의 운영 매개변수를 명시합니다. 이에는 클록 주파수, 클록 주기, 상승 및 하강 시간, 데이터 유효 및 유지 시간, 설정 시간이 포함됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 SSP 인터페이스 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 SSP 인터페이스 특성에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "SSP 인터페이스 특성은 SSP 클록 주파수, 데이터 입력 설정 및 유지 시간, 데이터 출력 유효 및 유지 시간, 슬레이브 모드에서의 듀티 사이클과 같은 측면을 다룹니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W7500 패키지 특성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W7500의 패키지 특성에 대해 자세히 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "패키지 특성에는 W7500을 다양한 하드웨어 설정에 물리적으로 통합하는 데 중요한 자세한 패키지 치수 정보 및 패키지 발자국 정보가 포함됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S란 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S는 WIZnet 기술로 설계된 전체 하드와이어 TCP/IP 인터넷 컨트롤러입니다. SPI(시리얼 주변장치 인터페이스) 또는 병렬 시스템 버스를 사용하여 임베디드 시스템에 인터넷 연결성을 제공합니다. W5100S는 하드와이어 TCP/IP 스택과 10/100 이더넷 MAC 및 PHY를 통합하여 안정적인 인터넷 연결을 위한 원칩 솔루션입니다. TCP, UDP, IPv4, ICMP, ARP, IGMP, PPPoE를 지원하며, 4개의 독립적인 SOCKET을 동시에 사용할 수 있고, 데이터 통신을 위한 16KB 내부 메모리를 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S의 특징에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S의 특징에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S는 TCP, UDP, WOL over UDP, ICMP, IGMPv1/v2, IPv4, ARP, PPPoE 같은 하드와이어 인터넷 프로토콜을 지원합니다. 4개의 독립 하드웨어 SOCKET을 동시에 지원하며, SOCKET-less 명령(ARP-Request, PING-Request), 이더넷 전원 다운 모드 및 메인 클록 게이팅을 통한 전력 절약, UDP를 통한 Wake on LAN 지원, 고속 SPI와 병렬 시스템 버스 호스트 인터페이스를 지원합니다. 내부에는 TX/RX 버퍼를 위한 16 Kbytes 메모리가 있으며, 10BaseT/100BaseTX 이더넷 PHY가 통합되어 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S의 대상 애플리케이션에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S의 대상 애플리케이션에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S는 W5100을 기반으로 한 사용자 제품, 홈 네트워크 장치(셋톱 박스, PVR, 디지털 미디어 어댑터), 시리얼-이더넷(접근 제어, LED 디스플레이, 무선 AP 중계 등), 병렬-이더넷(POS/미니 프린터, 복사기), USB-이더넷(저장 장치, 네트워크 프린터), GPIO-이더넷(홈 네트워크 센서), 보안 시스템(DVR, 네트워크 카메라, 키오스크), 공장/빌딩/홈 자동화, 의료 모니터링 장비, 임베디드 서버, IoT 디바이스, IoT 클라우드 디바이스 등 다양한 애플리케이션을 대상으로 합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 관련 문서에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 관련 문서에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 관련 문서로는 W5100S 데이터시트, W5100S 에러 시트, W5100S와 W5100 비교 시트, W5100S TCP 및 UDP 기능 설명서, W5100S IPRAW, PPPoE, SOCKET-less Command(SLC), Interrupt에 대한 애플리케이션 노트가 있습니다. 이 문서들은 W5100S의 기능, 사용 방법, 특정 프로토콜의 구현 방법 등을 설명하여 개발자가 W5100S를 사용하여 네트워크 애플리케이션을 쉽게 개발할 수 있도록 돕습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 하드웨어 디자인 가이드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 하드웨어 디자인 가이드에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 하드웨어 디자인 가이드에는 W5100S 크리스탈 선택 가이드와 IR 리플로우 프로파일이 포함됩니다. 이 가이드는 W5100S를 사용하여 하드웨어를 설계할 때 필요한 크리스탈 선택 기준과 리플로우 공정에 필요한 온도 프로파일 정보를 제공합니다. 이를 통해 개발자는 W5100S 기반의 하드웨어를 보다 효과적으로 설계하고 제작할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S 참조 스키매틱에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S 참조 스키매틱에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 참조 스키매틱은 W5100S를 사용한 하드웨어 설계의 참고 자료로, 외부 트랜스포머 타입과 RJ45 트랜스포머 내장 타입 두 가지 형태로 제공됩니다. 이 스키매틱은 W5100S를 사용하여 네트워크 기능을 임베디드 시스템에 통합하려는 개발자들에게 유용한 설계 가이드라인을 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB란 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB는 W5100S 칩을 위한 평가 보드로, 32비트 ARM® Cortex™-M3 마이크로컨트롤러를 기반으로 합니다. 이 보드는 WIZnet의 하드와이어 TCP/IP 임베디드 이더넷 컨트롤러인 W5100S를 사용하여 효율적이고 컴팩트한 임베디드 시스템의 인터넷 연결을 개발할 수 있도록 합니다. 'Arduino UNO Rev3' 및 기타 호환 보드용 'Arduino shields'와 하드웨어 핀 호환됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico란 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico는 Raspberry Pi RP2040과 완전한 하드와이어 TCP/IP 컨트롤러 W5100S를 기반으로 하는 마이크로컨트롤러 평가 보드입니다. 이 보드는 Raspberry Pi Pico 보드와 같이 작동하지만 W5100S를 통한 추가적인 이더넷 기능을 제공합니다. 이를 통해 사용자는 TCP, UDP, WOL, ICMP, IGMP, IPv4, ARP, PPPoE 등을 지원하는 네트워크 기능을 이용할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "'Serial to Ethernet' (S2E) 제품에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "S2E 모듈이란 무엇인가요?"
+            },
+            {
+                "role": "assistant",
+                "content": "S2E 모듈은 다양한 UART 프로토콜(TTL, RS-232, RS-422/485)을 TCP/IP로 변환하는 WIZnet의 제품 라인입니다. 이 모듈들은 UART 시리얼 인터페이스를 통해 TCP/IP 장치의 원격 모니터링, 관리 및 제어를 용이하게 합니다. WIZnet S2E 제품군은 다양한 핀 헤더 타입과 하드웨어 인터페이스를 지원합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "S2E 모듈 제품군에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "S2E 모듈 제품군에는 어떤 것들이 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "S2E 모듈 제품군에는 WIZ500SR-RP, WIZ505SR-RP, WIZ510SR-RP, W7500S2E-R1, W5500S2E 시리즈 등이 있습니다. 이들 각각은 고유한 특성을 가지며 다양한 LAN 인터페이스, 핀 헤더 및 치수를 제공합니다. 온도 범위도 -40도에서 85도까지 다양하며, 연관된 평가 보드나 브레이크아웃 보드를 통해 쉽게 테스트하고 개발할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "S2E 모듈에 대한 도구 선택 가이드에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "S2E 모듈에 대한 도구 선택 가이드는 어디에서 볼 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "S2E 모듈에 대한 도구 선택 가이드는 WIZnet의 공식 문서 페이지에서 제공됩니다. 이 가이드는 다양한 S2E 모듈에 대한 설정 도구, 구성 도구 사용자 가이드, 설정 도구 다운로드 링크 등을 포함하여, 사용자가 S2E 모듈을 효과적으로 사용할 수 있도록 돕습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizFi360에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WizFi360 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WizFi360은 저비용 및 저전력 소모의 산업 등급 WiFi 모듈입니다. IEEE802.11 b/g/n 표준과 호환되며 SoftAP, Station 및 SoftAP+Station 모드를 지원합니다. 시리얼 포트 보드레이트는 최대 2Mbps까지 지원하여 다양한 애플리케이션 요구사항을 만족시킬 수 있습니다. 자세한 정보는 제공된 링크를 참조하세요."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizFi360의 특징에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WizFi360의 특징에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WizFi360은 WiFi 2.4G, 802.11 b/g/n을 지원하며, Station / SoftAP / SoftAP+Station 운영 모드를 지원합니다. '데이터 패스스루' 및 'AT 명령 데이터 전송' 모드를 지원하고, TCP 서버 / TCP 클라이언트 / UDP 운영 모드를 지원합니다. 운영 채널 1 ~ 13의 구성, 자동 20MHz / 40MHz 대역폭, WPA_PSK / WPA2_PSK 암호화 등의 기능을 제공합니다. 최대 5개의 TCP / UDP 링크를 지원하며, 도메인 이름으로 서버와 통신할 수 있는 DNS를 지원합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WizFi360 데이터시트 및 예제에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WizFi360 데이터시트와 예제에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WizFi360 데이터시트는 제품의 상세 사양과 기술 정보를 제공합니다. 예제로는 WizFi360 TCP 성능 테스트, HTTP 서버, MQTT 클라이언트, Azure 클라우드 예제, Airkiss, SPI 모드 등이 있으며, 이들은 WizFi360을 사용하여 다양한 네트워크 애플리케이션을 개발하는 데 도움을 줍니다. WizFi360의 펌웨어 at-명령 정보는 Wiznet GitHub에서 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "iEthernet에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "iEthernet 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "iEthernet은 WIZnet에서 제공하는 이더넷 컨트롤러 칩으로, 하드와이어 TCP/IP 코어와 MAC(및 PHY)을 통합합니다. 이는 이더넷 연결성을 위한 강력한 솔루션으로 작용합니다. iEthernet에 대한 자세한 정보는 제공된 Wiznet Docs 개요 섹션을 참조하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet W6100에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet W6100에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W6100 칩은 TCP/IPv4/IPv6, MAC, PHY를 지원하도록 설계되었습니다. 8비트 BUS와 Fast SPI 호스트 인터페이스를 제공하며, 버퍼 크기는 32KB입니다. 최대 8개의 하드웨어 소켓을 처리할 수 있으며, 네트워크 성능은 최대 25Mbps입니다. 작동 온도 범위는 -40에서 +85°C이며, 48LQFP/QFN 패키지로 제공되고, 크기는 7x7입니다. W6100에 대한 자세한 내용은 Wiznet Docs를 참조하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet W5100S에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet W5100S에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S 모델은 TCP/IP, MAC, PHY 코어를 특징으로 하며, 16KB TX/RX 버퍼와 4개의 하드웨어 소켓을 지원합니다. 최대 네트워크 속도는 25Mbps이며, 8비트 BUS와 SPI 호스트 인터페이스를 지원합니다. 48LQFP/QFN 패키지로 제공되며, 크기는 7x7이고, 작동 온도 범위는 -40에서 +85°C입니다. W5100S에 대한 자세한 정보는 Wiznet Docs를 참조하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet W5500에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet W5500에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 칩은 TCP/IP, MAC, PHY 내장 코어를 갖추고 있으며, 32KB 버퍼를 제공하고 8개의 하드웨어 소켓을 지원합니다. Fast SPI 호스트 인터페이스를 제공하며, 네트워크 성능은 최대 15Mbps입니다. 칩은 -40에서 +85°C의 온도 범위에서 작동하며, 48LQFP 패키지로 제공되며 크기는 7x7입니다. W5500에 대한 자세한 내용은 Wiznet Docs를 참조하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet W5300에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet W5300에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5300 모델은 TCP/IP, MAC, PHY 코어를 포함하며, 큰 128KB TX/RX 버퍼와 8개의 하드웨어 소켓을 가집니다. 8/16비트 BUS 호스트 인터페이스를 지원하며, 최대 80Mbps의 높은 네트워크 성능을 자랑합니다. -40에서 +85°C의 온도 범위에서 작동하며, 100LQFP 패키지로 제공되며 크기는 14x14입니다. W5300에 대한 자세한 정보는 Wiznet Docs를 참조하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5200 칩에 대한 주의 사항에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5200 칩에 대한 주의 사항이 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "중요한 주의 사항으로, W5200 칩은 새로운 디자인에는 권장되지 않으며 ioLibrary에 의해 지원되지 않습니다. 질문이 있을 경우 WIZnet 포럼을 참조하거나 WIZnet에 직접 문의하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet 제품 애플리케이션 프로젝트에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet 제품을 사용한 애플리케이션 프로젝트에는 어떤 것들이 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet은 W5x00, W6100, W7500을 포함한 다양한 프로젝트를 컴파일했습니다. 이 프로젝트들은 통합 버전 프로젝트인 W5x00으로 초점을 맞추고 있으며, W5100, W5200, W5300을 AVRs로 구현한 프로젝트는 여기에 구체적으로 명시되어 있지 않습니다. 이 프로젝트에 대한 자세한 정보는 Wiznet Github 저장소를 방문하십시오."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico는 Raspberry Pi RP2040과 완전한 하드와이어 TCP/IP 컨트롤러인 W5500을 기반으로 하는 마이크로컨트롤러 평가 보드입니다. 이 보드는 Raspberry Pi Pico 보드와 기본적으로 동일하게 작동하지만, W5500을 통한 추가적인 이더넷 기능을 제공합니다. 이 보드는 AWS IoT Core 및 Microsoft Azure Device 인증을 받았습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico의 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico의 특징에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico는 RP2040 마이크로컨트롤러, 이중 코어 Cortex M0+ 최대 133MHz, 264KB 멀티 뱅크 고성능 SRAM, 외부 Quad-SPI Flash, 30개의 멀티 기능 GPIO, 12비트 500ksps ADC, 다양한 디지털 주변 장치(2 × UART, 2 × I2C, 2 × SPI, 16 × PWM 채널, 1 × 타이머, 1 × 실시간 카운터, 2 × 프로그래머블 IO 블록) 등을 특징으로 합니다. 또한, 하드와이어 인터넷 프로토콜(TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE), 8개의 독립 하드웨어 소켓, 내부 32KB 메모리 등을 지원합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico의 하드웨어 사양에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico의 하드웨어 사양에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico의 핀아웃은 RP2040의 GPIO에 직접 연결됩니다. GPIO16, GPIO17, GPIO18, GPIO19, GPIO20, GPIO21은 보드 내부의 W5500에 연결되어 이더넷 기능을 사용하기 위한 SPI 통신을 가능하게 합니다. 이더넷 기능을 사용하는 경우, 이 핀들은 다른 용도로 사용할 수 없습니다. 추가로, 보드에는 40핀 21x51 'DIP' 스타일 PCB, 3핀 ARM Serial Wire Debug (SWD) 포트, 10/100 이더넷 PHY, 내장 RJ45, 내장 LDO가 포함됩니다. 작동 온도는 최대 85°C, 최소 -20°C입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500-EVB-Pico의 기술 참조 및 인증에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500-EVB-Pico의 기술 참조 및 인증 정보는 어디서 볼 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5500-EVB-Pico에 대한 기술 참조는 RP2040 데이터시트, W5500 데이터시트, 스키매틱 및 부품 리스트, Gerber 파일 등이 GitHub에서 제공됩니다. 이 보드는 CE 및 FCC 인증을 받았으며, AWS IoT Core 및 Microsoft Azure Device로 인증된 RP2040 기반 장치입니다. 인증서 및 테스트 보고서는 제공된 링크를 통해 확인할 수 있습니다. 이를 통해 사용자는 AWS IoT Core 및 Azure IoT 시작 가이드를 참조하여 IoT 프로젝트를 시작할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico는 Raspberry Pi RP2040과 완전한 하드와이어 TCP/IP 컨트롤러인 W5100S를 기반으로 하는 마이크로컨트롤러 평가 보드입니다. 이 보드는 Raspberry Pi Pico 보드와 기본적으로 동일하게 작동하지만, W5100S를 통한 추가적인 이더넷 기능을 제공합니다. 이 보드는 AWS IoT Core 및 Microsoft Azure Device 인증을 받았습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico의 특징에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico는 RP2040 마이크로컨트롤러, 이중 코어 Cortex M0+ 최대 133MHz, 264KB 멀티 뱅크 고성능 SRAM, 외부 Quad-SPI Flash, 30개의 멀티 기능 GPIO, 1.8-3.3V IO 전압, 12비트 500ksps ADC, 다양한 디지털 주변 장치(2 × UART, 2 × I2C, 2 × SPI, 16 × PWM 채널, 1 × 타이머, 1 × 실시간 카운터, 2 × 프로그래머블 IO 블록) 등을 특징으로 합니다. 또한, 하드와이어 인터넷 프로토콜(TCP, UDP, WOL over UDP, ICMP, IGMPv1/v2, IPv4, ARP, PPPoE), 4개의 독립 하드웨어 소켓, 내부 16KB 메모리 등을 지원합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 하드웨어 사양에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico의 하드웨어 사양에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico의 핀아웃은 RP2040의 GPIO에 직접 연결됩니다. GPIO16, GPIO17, GPIO18, GPIO19, GPIO20, GPIO21은 보드 내부의 W5100S에 연결되어 이더넷 기능을 사용하기 위한 SPI 통신을 가능하게 합니다. 이더넷 기능을 사용하는 경우, 이 핀들은 다른 용도로 사용할 수 없습니다. 추가로, 보드에는 40핀 21x51 'DIP' 스타일 PCB, 3핀 ARM Serial Wire Debug (SWD) 포트, 10/100 이더넷 PHY, 내장 RJ45, 내장 LDO가 포함됩니다. 작동 온도는 최대 85°C, 최소 -20°C입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5100S-EVB-Pico의 기술 참조 및 인증에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5100S-EVB-Pico의 기술 참조 및 인증 정보는 어디서 볼 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5100S-EVB-Pico에 대한 기술 참조는 RP2040 데이터시트, W5100S 데이터시트, 스키매틱 및 부품 리스트, Gerber 파일 등이 GitHub에서 제공됩니다. 이 보드는 CE 및 FCC 인증을 받았으며, AWS IoT Core 및 Microsoft Azure Device로 인증된 RP2040 기반 장치입니다. 인증서 및 테스트 보고서는 제공된 링크를 통해 확인할 수 있습니다. 이를 통해 사용자는 AWS IoT Core 및 Azure IoT 시작 가이드를 참조하여 IoT 프로젝트를 시작할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet Pico PoE에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Pico PoE 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet Pico PoE는 Raspberry Pi RP2040과 W5100S, W5500, W6100 Io 모듈을 결합하여 이더넷 기능과 별도의 전원 공급 기능을 제공하는 마이크로컨트롤러 평가 보드입니다. 최대 8W의 전력을 공급할 수 있으며, Raspberry Pi Pico에 장착 가능하고, W5100S, W5500, W6100 Io 모듈을 장착할 수 있습니다. IEEE802.3af 표준을 준수하며, Mode A(Endspan), Mode B(Midspan)를 지원하고, 넓은 입력 전압 범위(37Vdc ~ 57Vdc)를 가집니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet Pico PoE의 기능에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Pico PoE의 특징에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet Pico PoE는 PoE(Power over Ethernet) 기능을 통해 IEEE802.3af 표준을 준수하며, 넓은 입력 전압 범위(37V ~ 57V)에서 작동합니다. 최대 8W의 전력 공급이 가능하며, 고DC/DC 변환 효율, 2kVrms의 절연 수준, 강화된 서지 보호 기능을 제공합니다. 내부에는 2채널 브릿지 정류기가 내장되어 있으며, 다양한 보호 기능(과전압, 과전류)이 포함되어 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet Pico PoE의 기술 참조 및 하드웨어 사양에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Pico PoE의 기술 참조 및 하드웨어 사양은 어떻게 되나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet Pico PoE는 RP2040 마이크로컨트롤러를 기반으로 하며, W5100S, W5500, W6100 Io 모듈과 직접 연결되어 이더넷 기능을 사용할 수 있습니다. 이 보드는 37 ~ 57V의 입력 전압에서 5V(1.6A) 및 3.3V(1A LDO)의 출력 전압을 제공합니다. 작동 온도 범위는 -20 ~ 85℃이며, 최대 70℃의 운영 온도 조건에서 권장됩니다. 기술 참조 자료로는 io-Module 데이터 참조, RP2040 데이터시트, 스키매틱 V100, 스키매틱 및 부품 리스트, Gerber 파일 등이 GitHub에서 제공됩니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet Ethernet HAT에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Ethernet HAT 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet Ethernet HAT은 W5100S를 사용하며 3.3V 및 5V 모두를 지원하는 Raspberry Pi Pico와 핀 호환 가능한 보드입니다. 이 보드는 하드와이어 인터넷 프로토콜(TCP, UDP, WOL over UDP, ICMP, IGMPv1/v2, IPv4, ARP, PPPoE)을 지원하며, 4개의 독립 하드웨어 소켓과 내부에 16KB 메모리를 갖추고 있습니다. 10/100 이더넷 PHY가 내장되어 있으며, 자동 협상, 전/반 이중, 10/100 기반을 지원합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet Ethernet HAT의 하드웨어 사양에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Ethernet HAT의 하드웨어 사양에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet Ethernet HAT은 다음과 같은 핀 설명을 포함한 하드웨어 사양을 가지고 있습니다: VBUS(전원 공급, 4.3~5.5V), 3V3(전원 공급, 3.3V), GND(전원 그라운드), INTn(W5100S 인터럽트, 낮은 활성화), RSTn(W5100S 리셋, 낮은 활성화), SPI0 TX(SPI MOSI), SPI0 SCK(SPI 클록), SPI0 CSn(SPI 슬레이브 선택), SPI0 RX(SPI MISO). 또한, 5V I/O 내성, 내장 LDO(LM8805SF5-33V), SPI 인터페이스, 내장 RJ45(RB1-125BAG1A)를 지원합니다. 제품의 치수는 21 x 68 x 18(mm)입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "WIZnet Ethernet HAT의 기술 참조 및 펌웨어 예제에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "WIZnet Ethernet HAT의 기술 참조 및 펌웨어 예제는 어디서 볼 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "WIZnet Ethernet HAT에 대한 기술 참조 자료로는 W5100S 데이터시트, 스키매틱 및 부품 리스트, Gerber 파일 등이 있으며, 이는 GitHub에서 확인할 수 있습니다. 펌웨어 예제로는 C/C++ 예제, CircuitPython 예제가 있으며, 이들 예제는 제공된 링크를 통해 확인할 수 있습니다. 제품 구매는 WIZnetUS 온라인 샵, WIZnetKorea 온라인 샵에서 가능합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-EVB-Pico에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100-EVB-Pico 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W6100-EVB-Pico는 Raspberry Pi RP2040과 완전한 하드와이어 TCP/IP 컨트롤러인 W6100을 기반으로 하는 마이크로컨트롤러 평가 보드입니다. 이 보드는 Raspberry Pi Pico 보드와 기본적으로 동일하게 작동하지만, W6100을 통한 추가적인 이더넷 기능을 제공합니다. 이 보드는 하드와이어 인터넷 프로토콜(TCP, UDP, IPv6, IPv4, ICMPv6, ICMPv4, IGMP, MLDv1, ARP, PPPoE)을 지원하며, 8개의 독립 하드웨어 소켓과 내부에 16KB 메모리를 갖추고 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-EVB-Pico의 하드웨어 사양에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100-EVB-Pico의 하드웨어 사양에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W6100-EVB-Pico의 핀아웃은 RP2040의 GPIO에 직접 연결됩니다. GPIO16, GPIO17, GPIO18, GPIO19, GPIO20, GPIO21은 보드 내부의 W6100에 연결되어 이더넷 기능을 사용하기 위한 SPI 통신을 가능하게 합니다. 이더넷 기능을 사용하는 경우, 이 핀들은 다른 용도로 사용할 수 없습니다. 추가로, 보드에는 40핀 21x51 'DIP' 스타일 PCB, 3핀 ARM Serial Wire Debug (SWD) 포트, 10/100 이더넷 PHY, 내장 RJ45, 내장 LDO가 포함됩니다. 작동 온도는 최대 85°C, 최소 -20°C입니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W6100-EVB-Pico의 기술 참조 및 인증에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W6100-EVB-Pico의 기술 참조 및 인증 정보는 어디서 볼 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W6100-EVB-Pico에 대한 기술 참조 자료로는 RP2040 데이터시트, W6100 데이터시트, 스키매틱 및 부품 리스트, Gerber 파일 등이 있으며, 이는 GitHub에서 확인할 수 있습니다. 펌웨어 예제로는 C/C++ 예제, Ethernet 예제, FreeRTOS 예제가 있으며, 이들 예제는 제공된 링크를 통해 확인할 수 있습니다. 제품은 CE 및 FCC 인증을 받았으며, 인증서 및 테스트 보고서는 Wiznet Docs 의 자세한 링크를 통해 확인할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 Ethernet Shield에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 Ethernet Shield 개요에 대해 알려주세요."
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 Ethernet Shield는 WIZnet W5500 칩을 사용하여 설계된 이더넷 쉴드입니다. 이 쉴드는 3.3V 및 5V를 지원하며, Arduino 및 ARM mbed 플랫폼과 호환됩니다. W5500 칩에 대한 자세한 정보는 링크를 통해 확인할 수 있습니다. 이 쉴드는 ARM mbed 보드와 Arduino 보드 및 Arduino 호환 보드에서 사용할 수 있으며, SPI 인터페이스, 내부 32KB Tx/Rx 버퍼, 10/100 이더넷 PHY를 내장하고 있습니다. 자동 협상(전/반 이중, 10/100 기반), 하드와이어 TCP/IP 프로토콜(TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE)을 지원하며, 사용자 선택 가능한 GPIO 핀, SD 카드 슬롯, I2C 및 UART 인터페이스를 제공합니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 Ethernet Shield의 하드웨어 구성에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 Ethernet Shield의 하드웨어 구성은 어떻게 되나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 Ethernet Shield의 하드웨어 구성에는 다음과 같은 구성 요소가 포함됩니다: RJ-45 포트(트랜스포머 포함)로 이더넷 포트를 제공하며, W5500 하드와이어 TCP/IP 이더넷 컨트롤러가 탑재되어 있습니다. RESET 버튼은 눌렀을 때 이더넷 쉴드와 Arduino를 리셋합니다. SD 슬롯은 FAT16 또는 FAT32 형식의 마이크로 SD 카드를 지원합니다. I2C 및 UART 인터페이스를 제공하며, 여러 가지 GPIO 핀을 구성할 수 있습니다. SPI 통신을 위한 INTn 핀이 D2(2,3 Short)에 연결되어 있으며, 필요한 경우 다른 핀으로 변경할 수 있습니다."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "W5500 Ethernet Shield의 기술 참조 및 예제에 대한 정보를 제공하는 전문가입니다."
+            },
+            {
+                "role": "user",
+                "content": "W5500 Ethernet Shield의 기술 참조 및 예제는 어디서 볼 수 있나요?"
+            },
+            {
+                "role": "assistant",
+                "content": "W5500 Ethernet Shield에 대한 기술 참조 자료로는 W5500 데이터시트 및 스키매틱(Rev 1.0, Rev 1.1 및 Rev 1.01_Customize), 부품 리스트, Gerber 파일 등이 있으며, 이는 GitHub에서 확인할 수 있습니다. 예제로는 Twitter 테스트 및 ioShield-A용 Ethernet 라이브러리 등이 있으며, 이는 제공된 GitHub 링크를 통해 확인할 수 있습니다. 이더넷 쉴드를 사용하기 위한 Arduino IDE 업데이트 및 추가 설정이 필요할 수 있으며, 자세한 정보는 'Getting Started' 링크를 참조하시기 바랍니다."
+            }
+        ]
+    }
+]
